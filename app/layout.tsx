@@ -2,6 +2,8 @@ import type { Metadata } from "next";
 import "./globals.css";
 import NavBar from "@/components/NavBar";
 import Footer from "@/components/Footer";
+import { SpeedInsights } from "@vercel/speed-insights/next";
+import { Analytics } from "@vercel/analytics/next";
 
 export const metadata: Metadata = {
   title: "California Berry Cultivars | Independent Strawberry Breeding",
@@ -24,6 +26,8 @@ export default function RootLayout({
           {children}
         </main>
         <Footer />
+        <SpeedInsights />
+        <Analytics />
       </body>
     </html>
   );
