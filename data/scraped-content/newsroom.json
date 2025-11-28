@@ -1,0 +1,45 @@
+{
+  "pageName": "newsroom",
+  "title": "Newsroom - California Berry Cultivars",
+  "description": "",
+  "headings": [],
+  "paragraphs": [
+    "Stay up to date on what&#8217;s happening in our industry!"
+  ],
+  "links": [
+    {
+      "url": "http://blog.agratech.com/?p=855",
+      "text": "California Berry Cultivars is a World-Class \"Strawberry Start-Up\""
+    },
+    {
+      "url": "http://ucanr.edu/blogs/strawberries_caneberries/",
+      "text": "UC-ANR Strawberry & Caneberry Blog"
+    },
+    {
+      "url": "http://www.freshplaza.com/news",
+      "text": "Fresh Plaza"
+    },
+    {
+      "url": "http://www.thepacker.com/",
+      "text": "The Packer"
+    },
+    {
+      "url": "http://www.thepacker.com/shipping-profiles/southern-california-strawberries/california-strawberry-industry-adapts-change",
+      "text": "California Strawberry Industry Adapts to Change"
+    },
+    {
+      "url": "http://www.thepacker.com/shipping-profiles/southern-california-strawberries/growers-expect-good-strawberry-crop-despite-rain",
+      "text": "Growers Expect Good Strawberry Crop despite Rain"
+    },
+    {
+      "url": "http://www.freshplaza.com/article/170376/Egypt-Strawberry-sector-just-keeps-on-growing-and-getting-stronger",
+      "text": "Strawberry Sector Just Keeps on Growing and Getting Stronger"
+    },
+    {
+      "url": "http://www.capitalpress.com/California/20170113/strawberry-production-stabilizes-china-begins-imports",
+      "text": "Strawberry Production Stabilizes; China Begins Imports"
+    }
+  ],
+  "images": [],
+  "rawHtml": "\r\n        <div class=\"container-fluid\">\r\n        \r\n        <div class=\"row\">\r\n        <div class=\"col-xs-12\">\r\n        \r\n        <p>Stay up to date on what&#8217;s happening in our industry!</p>\n<h4>CBC Related News</h4><ul>\r\n\t\t\t\t\t\t\t<li><a href=\"http://blog.agratech.com/?p=855\" target=\"_blank\">California Berry Cultivars is a World-Class \"Strawberry Start-Up\"</a></li></ul><h4>Industry Related News</h4><ul>\r\n\t\t\t\t\t\t\t<li><a href=\"http://ucanr.edu/blogs/strawberries_caneberries/\" target=\"_blank\">UC-ANR Strawberry & Caneberry Blog</a></li>\r\n\t\t\t\t\t\t\t<li><a href=\"http://www.freshplaza.com/news\" target=\"_blank\">Fresh Plaza</a></li>\r\n\t\t\t\t\t\t\t<li><a href=\"http://www.thepacker.com/\" target=\"_blank\">The Packer</a></li></ul><h4>Strawberries in the News</h4><ul>\r\n\t\t\t\t\t\t\t<li><a href=\"http://www.thepacker.com/shipping-profiles/southern-california-strawberries/california-strawberry-industry-adapts-change\" target=\"_blank\">California Strawberry Industry Adapts to Change</a></li>\r\n\t\t\t\t\t\t\t<li><a href=\"http://www.thepacker.com/shipping-profiles/southern-california-strawberries/growers-expect-good-strawberry-crop-despite-rain\" target=\"_blank\">Growers Expect Good Strawberry Crop despite Rain</a></li>\r\n\t\t\t\t\t\t\t<li><a href=\"http://www.freshplaza.com/article/170376/Egypt-Strawberry-sector-just-keeps-on-growing-and-getting-stronger\" target=\"_blank\">Strawberry Sector Just Keeps on Growing and Getting Stronger</a></li>\r\n\t\t\t\t\t\t\t<li><a href=\"http://www.capitalpress.com/California/20170113/strawberry-production-stabilizes-china-begins-imports\" target=\"_blank\">Strawberry Production Stabilizes; China Begins Imports</a></li></ul>        \r\n        "
+}

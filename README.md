@@ -1,36 +1,63 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# CBC Homepage - New Next.js App
 
-## Getting Started
+**Purpose:** Rebuild of www.cbcberry.com as a modern Next.js application
 
-First, run the development server:
+## Project Structure
+
+```
+cbc-homepage/
+├── app/                    # Next.js app directory
+├── components/             # React components
+├── data/                   # Content and data files
+│   └── scraped-content/   # Content scraped from old site
+├── scripts/                # Utility scripts
+│   └── scrape-content.js  # Content scraper
+└── shared/                 # Shared theme/components (to be added)
+```
+
+## Content Scraping
+
+Content has been scraped from the old WordPress site at https://www.caberrycultivars.com/
+
+**Scraped Pages:**
+- Home
+- About Us (and subpages: How It Started, Partners, Team, FAQ)
+- Breeding Program (and subpages: Philosophy, Current Efforts, Innovation)
+- Newsroom
+- Contact
+
+**Content Files:**
+- `data/scraped-content/all-content.json` - All scraped content
+- `data/scraped-content/summary.json` - Overview
+- `data/scraped-content/[page-name].json` - Individual pages
+
+See `CONTENT_SUMMARY.md` for detailed breakdown.
+
+## Next Steps
+
+1. ✅ Content scraped from old site
+2. ⏳ Review and organize scraped content
+3. ⏳ Design layout structure
+4. ⏳ Decide on theme sharing with cultivar explorer
+5. ⏳ Build page templates
+6. ⏳ Implement navigation
+7. ⏳ Add shared theme (optional)
+
+## Theme Sharing
+
+This app can optionally share theme files from `cbc-cultivar-explorer/shared/theme/`:
+- `variables.css` - Design tokens
+- `base.css` - Base glassmorphism styles
+- `components.css` - Reusable component styles
+
+See `../cbc-cultivar-explorer/docs/THEME_EXTRACTION_GUIDE.md` for details.
+
+## Development
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Deployment
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
-
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+This will be deployed as a separate Vercel project for www.cbcberry.com

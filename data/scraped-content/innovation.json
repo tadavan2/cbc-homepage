@@ -1,0 +1,15 @@
+{
+  "pageName": "innovation",
+  "title": "Innovating - California Berry Cultivars",
+  "description": "",
+  "headings": [],
+  "paragraphs": [],
+  "links": [],
+  "images": [
+    {
+      "src": "https://cultivars.wpenginepowered.com/wp-content/uploads/2017/04/Innovating_people.png",
+      "alt": ""
+    }
+  ],
+  "rawHtml": "\r\n        <div class=\"container\">\r\n        \r\n<!--First Section-->\r\n        <div class=\"row innov-box\">\r\n        \t<div class=\"col-sm-6 col-sm-push-6\">\r\n\t\t\t\t\t\t\t\t\t\t<img src=\"https://cultivars.wpenginepowered.com/wp-content/uploads/2017/04/Innovating_people.png\" alt=\"\" />\r\n\t\t\t\t\t\t\t"
+}

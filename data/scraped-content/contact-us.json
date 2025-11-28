@@ -1,0 +1,12 @@
+{
+  "pageName": "contact-us",
+  "title": "Contact - California Berry Cultivars",
+  "description": "",
+  "headings": [],
+  "paragraphs": [
+    "For questions or to provide feedback, please refer to the following:"
+  ],
+  "links": [],
+  "images": [],
+  "rawHtml": "\n        <div class=\"container-fluid\">\n        \n        <div class=\"row\">\n        <div class=\"col-xs-12\">\n        <div class=\"contact-inner-col-4\">\n        <p>For questions or to provide feedback, please refer to the following:</p>\n        "
+}

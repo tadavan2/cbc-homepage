@@ -1,0 +1,15 @@
+{
+  "pageName": "how-it-started",
+  "title": "How it all started - California Berry Cultivars",
+  "description": "",
+  "headings": [],
+  "paragraphs": [],
+  "links": [],
+  "images": [
+    {
+      "src": "https://cultivars.wpenginepowered.com/wp-content/uploads/2017/05/HiS_hanging-fruit.png",
+      "alt": ""
+    }
+  ],
+  "rawHtml": "\r\n        <div class=\"container his-bkgd\">\r\n<!--First Section-->\r\n        <div class=\"row his-box\">\r\n        \t<div class=\"col-sm-6\">\r\n\t\t\t\t\t\t\t\t\t\t<img src=\"https://cultivars.wpenginepowered.com/wp-content/uploads/2017/05/HiS_hanging-fruit.png\" alt=\"\" />\r\n\t\t\t\t\t\t\t"
+}

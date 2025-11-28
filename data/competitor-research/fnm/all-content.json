@@ -1,0 +1,41 @@
+[
+  {
+    "pageName": "contact",
+    "title": "Contact - Fresas NM - Obtentores de variedades de fresas y frambuesas",
+    "description": "",
+    "headings": [
+      {
+        "level": 1,
+        "text": "Contact"
+      },
+      {
+        "level": 1,
+        "text": "Huelva"
+      },
+      {
+        "level": 1,
+        "text": "El Rompido"
+      },
+      {
+        "level": 2,
+        "text": "Experimentation center"
+      }
+    ],
+    "paragraphs": [
+      "Avenida de Andalucía, 70, Local Izquierda, 21007, Huelva\n 959 809 891\nfnm@fresasnm.com",
+      "Polígono 21, Parcela 3 en Cañada de Velasco, Cartaya, Huelva\n 959 809 891\nfnm@fresasnm.com"
+    ],
+    "lists": [],
+    "sections": [
+      {
+        "title": "Contact",
+        "content": "<div class=\"l-section-h i-cf\"><div class=\"g-cols vc_row type_default valign_top\"><div class=\"vc_col-sm-6 wpb_column vc_column_container\"><div class=\"vc_column-inner\"><div class=\"wpb_wrapper\"><h1 style=\"text-align: left\" class=\"vc_custom_heading\" >Contact</h1><div class=\"wpforms-container wpforms-container-full\" id=\"wpforms-439\"><form id=\"wpforms-form-439\" class=\"wpforms-validate wpforms-form\" data-formid=\"439\" method=\"post\" enctype=\"multipart/form-data\" action=\"/contact/?lang=en\" data-token=\"a15"
+      },
+      {
+        "title": "",
+        "content": "<div class=\"l-section-h i-cf\"><div class=\"g-cols vc_row type_default valign_middle\"><div class=\"vc_col-sm-2 wpb_column vc_column_container\"><div class=\"vc_column-inner\"><div class=\"wpb_wrapper\"></div></div></div><div class=\"vc_col-sm-8 wpb_column vc_column_container\"><div class=\"vc_column-inner\"><div class=\"wpb_wrapper\"><div class=\"w-separator size_large\"></div></div></div></div><div class=\"vc_col-sm-2 wpb_column vc_column_container\"><div class=\"vc_column-inner\"><div class=\"wpb_wrapper\"></div></"
+      }
+    ],
+    "rawHtml": "\r\n\t<section class=\"l-section wpb_row height_large\"><div class=\"l-section-h i-cf\"><div class=\"g-cols vc_row type_default valign_top\"><div class=\"vc_col-sm-6 wpb_column vc_column_container\"><div class=\"vc_column-inner\"><div class=\"wpb_wrapper\"><h1 style=\"text-align: left\" class=\"vc_custom_heading\" >Contact</h1><div class=\"wpforms-container wpforms-container-full\" id=\"wpforms-439\"><form id=\"wpforms-form-439\" class=\"wpforms-validate wpforms-form\" data-formid=\"439\" method=\"post\" enctype=\"multipart/form-data\" action=\"/contact/?lang=en\" data-token=\"a152aed100d7ba0e9e963612af274703\"><noscript class=\"wpforms-error-noscript\">Please enable JavaScript in your browser to complete this form.</noscript><div class=\"wpforms-field-container\"><div id=\"wpforms-439-field_0-container\" class=\"wpforms-field wpforms-field-name\" data-field-id=\"0\"><label class=\"wpforms-field-label\" for=\"wpforms-439-field_0\">Name <span class=\"wpforms-required-label\">*</span></label><input type=\"text\" id=\"wpforms-439-field_0\" class=\"wpforms-field-medium wpforms-field-required\" name=\"wpforms[fields][0]\" required></div><div id=\"wpforms-439-field_1-container\" class=\"wpforms-field wpforms-field-email\" data-field-id=\"1\"><label class=\"wpforms-field-label\" for=\"wpforms-439-field_1\">E-Mail <span class=\"wpforms-required-label\">*</span></label><input type=\"email\" id=\"wpforms-439-field_1\" class=\"wpforms-field-medium wpforms-field-required\" name=\"wpforms[fields][1]\" required></div><div id=\"wpforms-439-field_3-container\" class=\"wpforms-field wpforms-field-number\" data-field-id=\"3\"><label class=\"wpforms-field-label\" for=\"wpforms-439-field_3\">Phone</label><input type=\"number\" pattern=\"\\d*\" id=\"wpforms-439-field_3\" class=\"wpforms-field-medium\" name=\"wpforms[fields][3]\" ></div><div id=\"wpforms-439-field_2-container\" class=\"wpforms-field wpforms-field-textarea\" data-field-id=\"2\"><label class=\"wpforms-field-label\" for=\"wpforms-439-field_2\">Message <span class=\"wpforms-required-label\">*</span></label><textarea id=\"wpforms-439-field_2\" class=\"wpforms-field-medium wpforms-field-required\" name=\"wpforms[fields][2]\" required></textarea></div></div><div class=\"wpforms-recaptcha-container wpforms-is-recaptcha\"><div class=\"g-recaptcha\" data-sitekey=\"6Ld_QL4ZAAAAALVuwBu12Xwlq_G2P5jpByLDdnQE\"></div><input type=\"text\" name=\"g-recaptcha-hidden\" class=\"wpforms-recaptcha-hidden\" style=\"position:absolute!important;clip:rect(0,0,0,0)!important;height:1px!important;width:1px!important;border:0!important;overflow:hidden!important;padding:0!important;margin:0!important;\" required></div><div class=\"wpforms-submit-container\"><input type=\"hidden\" name=\"wpforms[id]\" value=\"439\"><input type=\"hidden\" name=\"wpforms[author]\" value=\"1\"><input type=\"hidden\" name=\"wpforms[post_id]\" value=\"435\"><button type=\"submit\" name=\"wpforms[submit]\" id=\"wpforms-submit-439\" class=\"wpforms-submit\" data-alt-text=\"Sending...\" data-submit-text=\"Send\" aria-live=\"assertive\" value=\"wpforms-submit\">Send</button></div></form></div>  <!-- .wpforms-container --></div></div></div><div class=\"vc_col-sm-6 wpb_column vc_column_container\"><div class=\"vc_column-inner\"><div class=\"wpb_wrapper\"><h1 style=\"text-align: left\" class=\"vc_custom_heading\" >Huelva</h1><div class=\"wpb_text_column\" ><div class=\"wpb_wrapper\"><p><i class=\"fa fa-location-arrow\" aria-hidden=\"true\"></i>Avenida de Andalucía, 70, Local Izquierda, 21007, Huelva<br />\n<i class=\"fa fa-phone\" aria-hidden=\"true\"></i> 959 809 891<br />\n<b><a href=\"mailto:fnm@fresasnm.com\" target=\"_blank\" rel=\"noopener noreferrer\">fnm@fresasnm.com</a></b></p>\n</div></div><h1 style=\"text-align: left\" class=\"vc_custom_heading\" >El Rompido</h1><h2 style=\"text-align: left\" class=\"vc_custom_heading\" >Experimentation center</h2><div class=\"wpb_text_column\" ><div class=\"wpb_wrapper\"><p><i class=\"fa fa-location-arrow\" aria-hidden=\"true\"></i> Polígono 21, Parcela 3 en Cañada de Velasco, Cartaya, Huelva<br />\n<i class=\"fa fa-phone\" aria-hidden=\"true\"></i> 959 809 891<br />\n<b><a href=\"mailto:fnm@fresasnm.com\" target=\"_blank\" rel=\"noopener noreferrer\">fnm@fresasnm.com</a></b></p>\n</div></div><div class=\"w-socials color_brand shape_square style_default hover_fade\"><div class=\"w-socials-list\"><div class=\"w-socials-item facebook\"><a class=\"w-socials-item-link\" rel=\"noopener nofollow\" target=\"_blank\" href=\"https://www.facebook.com/fresasnm/\" title=\"Facebook\" aria-label=\"Facebook\"><span class=\"w-socials-item-link-hover\"></span></a><div class=\"w-socials-item-popup\"><span>Facebook</span></div></div><div class=\"w-socials-item twitter\"><a class=\"w-socials-item-link\" rel=\"noopener nofollow\" target=\"_blank\" href=\"https://twitter.com/fresas_nm\" title=\"Twitter\" aria-label=\"Twitter\"><span class=\"w-socials-item-link-hover\"></span></a><div class=\"w-socials-item-popup\"><span>Twitter</span></div></div><div class=\"w-socials-item linkedin\"><a class=\"w-socials-item-link\" rel=\"noopener nofollow\" target=\"_blank\" href=\"https://www.linkedin.com/organization-guest/company/fresasnm?challengeId=AQH8UBM2Ab53FwAAAXNrsAiGEuED_MjHqY_dGNnYQQLMLWVZZe_XMmddKjd8qPefPsgjfqj0JlVoYQh76s0Mp0urRqLmKWB0eA&#038;submissionId=ed17f6c3-ee6d-2316-6d8f-e45df5e75430\" title=\"LinkedIn\" aria-label=\"LinkedIn\"><span class=\"w-socials-item-link-hover\"></span></a><div class=\"w-socials-item-popup\"><span>LinkedIn</span></div></div></div></div></div></div></div></div></div></section><section class=\"l-section wpb_row height_auto\"><div class=\"l-section-h i-cf\"><div class=\"g-cols vc_row type_default valign_middle\"><div class=\"vc_col-sm-2 wpb_column vc_column_container\"><div class=\"vc_column-inner\"><div class=\"wpb_wrapper\"></div></div></div><div class=\"vc_col-sm-8 wpb_column vc_column_container\"><div class=\"vc_column-inner\"><div class=\"wpb_wrapper\"><div class=\"w-separator size_large\"></div></div></div></div><div class=\"vc_col-sm-2 wpb_column vc_column_container\"><div class=\"vc_column-inner\"><div class=\"wpb_wrapper\"></div></div></div></div></div></section>\n"
+  }
+]

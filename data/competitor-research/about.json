@@ -1,0 +1,9 @@
+{
+  "pageName": "about",
+  "title": "Plant Sciences Genetics",
+  "description": "",
+  "headings": [],
+  "paragraphs": [],
+  "sections": [],
+  "rawHtml": "\n  <app-root></app-root>\n  <!-- <script src=\"https://accounts.google.com/gsi/client\"></script> -->\n<script src=\"runtime.652e686531975de4.js\" type=\"module\"></script><script src=\"polyfills.be24ef490ba2450d.js\" type=\"module\"></script><script src=\"scripts.63cb2af96ad0221a.js\" defer></script><script src=\"main.42b5491d2934387a.js\" type=\"module\"></script>\n"
+}

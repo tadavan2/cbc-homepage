@@ -1,0 +1,386 @@
+[
+  {
+    "pageName": "home",
+    "title": "Home - California Berry Cultivars",
+    "description": "",
+    "headings": [],
+    "paragraphs": [
+      "Rapid development of productive cultivars with high quality fruit and disease resistance that will meet the current and future needs of our customers."
+    ],
+    "links": [],
+    "images": [],
+    "rawHtml": "\r\n        \r\n\t\t<h2 class=\"home-styled-heading-2\"><span>We Are</span>Future Focused</h2>\t\t\t\r\n\t\t<div class=\"home-s-1-content\">\r\n        <p>Rapid development of productive cultivars with high quality fruit and disease resistance that will meet the current and future needs of our customers.</p>\n\t\t"
+  },
+  {
+    "pageName": "cultivar",
+    "title": "",
+    "description": "",
+    "headings": [],
+    "paragraphs": [],
+    "links": [],
+    "images": [],
+    "rawHtml": "Slider with alias slider-3 not found."
+  },
+  {
+    "pageName": "about-us",
+    "title": "About Us - California Berry Cultivars",
+    "description": "",
+    "headings": [
+      {
+        "level": 1,
+        "text": "About Us"
+      }
+    ],
+    "paragraphs": [],
+    "links": [
+      {
+        "url": "#anchor-content-section",
+        "text": "Skip to Content"
+      },
+      {
+        "url": "/",
+        "text": "Home"
+      },
+      {
+        "url": "http://cultivars.cbcberry.com",
+        "text": "Cultivars"
+      },
+      {
+        "url": "#",
+        "text": "About Us"
+      },
+      {
+        "url": "https://www.caberrycultivars.com/about-us/how-it-all-started/",
+        "text": "How It Started"
+      },
+      {
+        "url": "https://www.caberrycultivars.com/about-us/partners/",
+        "text": "Partners"
+      },
+      {
+        "url": "https://www.caberrycultivars.com/about-us/team/",
+        "text": "Team"
+      },
+      {
+        "url": "https://www.caberrycultivars.com/about-us/faq/",
+        "text": "FAQs"
+      },
+      {
+        "url": "#",
+        "text": "Breeding Program"
+      },
+      {
+        "url": "https://www.caberrycultivars.com/breeding-program/philosophy/",
+        "text": "Philosophy"
+      },
+      {
+        "url": "https://www.caberrycultivars.com/breeding-program/current-efforts/",
+        "text": "Current Efforts"
+      },
+      {
+        "url": "https://www.caberrycultivars.com/breeding-program/innovating/",
+        "text": "Innovation"
+      },
+      {
+        "url": "https://www.caberrycultivars.com/newsroom/",
+        "text": "Newsroom"
+      },
+      {
+        "url": "https://www.caberrycultivars.com/contact/",
+        "text": "Contact Us"
+      },
+      {
+        "url": "https://www.caberrycultivars.com/about-us/how-it-all-started/",
+        "text": "About Us"
+      },
+      {
+        "url": "https://www.caberrycultivars.com/breeding-program/philosophy/",
+        "text": "Breeding Program"
+      },
+      {
+        "url": "https://www.caberrycultivars.com/newsroom/",
+        "text": "Newsroom"
+      },
+      {
+        "url": "https://www.caberrycultivars.com/contact/",
+        "text": "Contact Us"
+      }
+    ],
+    "images": [
+      {
+        "src": "http://cultivars.wpenginepowered.com/wp-content/uploads/2023/07/ca-berry-cultivars-logo.png",
+        "alt": ""
+      },
+      {
+        "src": "http://cultivars.wpenginepowered.com/wp-content/uploads/2023/07/ca-berry-cultivars-logo.png",
+        "alt": ""
+      }
+    ],
+    "rawHtml": "\n\n<a class=\"skip-to-content-link\" href=\"#anchor-content-section\">Skip to Content</a>\n\t\n   \n<div class=\"top-wrapper-outer\">\n<div id=\"top-wrapper\">\n\n\n\t<div id=\"main-logo\">\n\t<a href=\"/\"><img src=\"http://cultivars.wpenginepowered.com/wp-content/uploads/2023/07/ca-berry-cultivars-logo.png\" width=\"400\" title=\"California Berry Cultivars\" alt=\"California Berry Cultivars logo\" /></a>\n\t</div>\n\t\n            \n        <div class=\"breadcrumbs-nav\">\n        <ul>\n        <li><a href=\"/\">Home</a></li>\n        \n                <li>About Us</li>\n        </ul>\n        </div><!-- end .breadcrumbs-nav -->\n    \n    \n\n<div id=\"mn-toggle-link\"><a href=\"javascript:void(0)\" title=\"Show Main Navigation\"></a></div>\n\n</div><!-- end #top-wrapper -->\n</div><!-- end .top-wrapper-outer -->\n\n<div class=\"main-nav-outer\">\n<div id=\"mn-toggle-link-2\"><a href=\"javascript:void(0)\" title=\"Hide Main Navigation\"></a></div>\n<nav id=\"main-nav\" role=\"navigation\">\n<ul id=\"menu-main-navigation\" class=\"menu\"><li id=\"menu-item-30746\" class=\"menu-item menu-item-type-custom menu-item-object-custom menu-item-30746\"><a href=\"http://cultivars.cbcberry.com\">Cultivars</a></li>\n<li id=\"menu-item-189\" class=\"menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-189\"><a href=\"#\">About Us</a>\n<ul class=\"sub-menu\">\n\t<li id=\"menu-item-187\" class=\"menu-item menu-item-type-post_type menu-item-object-page menu-item-187\"><a href=\"https://www.caberrycultivars.com/about-us/how-it-all-started/\">How It Started</a></li>\n\t<li id=\"menu-item-194\" class=\"menu-item menu-item-type-post_type menu-item-object-page menu-item-194\"><a href=\"https://www.caberrycultivars.com/about-us/partners/\">Partners</a></li>\n\t<li id=\"menu-item-196\" class=\"menu-item menu-item-type-post_type menu-item-object-page menu-item-196\"><a href=\"https://www.caberrycultivars.com/about-us/team/\">Team</a></li>\n\t<li id=\"menu-item-192\" class=\"menu-item menu-item-type-post_type menu-item-object-page menu-item-192\"><a href=\"https://www.caberrycultivars.com/about-us/faq/\">FAQs</a></li>\n</ul>\n</li>\n<li id=\"menu-item-190\" class=\"menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-190\"><a href=\"#\">Breeding Program</a>\n<ul class=\"sub-menu\">\n\t<li id=\"menu-item-195\" class=\"menu-item menu-item-type-post_type menu-item-object-page menu-item-195\"><a href=\"https://www.caberrycultivars.com/breeding-program/philosophy/\">Philosophy</a></li>\n\t<li id=\"menu-item-191\" class=\"menu-item menu-item-type-post_type menu-item-object-page menu-item-191\"><a href=\"https://www.caberrycultivars.com/breeding-program/current-efforts/\">Current Efforts</a></li>\n\t<li id=\"menu-item-193\" class=\"menu-item menu-item-type-post_type menu-item-object-page menu-item-193\"><a href=\"https://www.caberrycultivars.com/breeding-program/innovating/\">Innovation</a></li>\n</ul>\n</li>\n<li id=\"menu-item-230\" class=\"menu-item menu-item-type-post_type menu-item-object-page menu-item-230\"><a href=\"https://www.caberrycultivars.com/newsroom/\">Newsroom</a></li>\n<li id=\"menu-item-183\" class=\"menu-item menu-item-type-post_type menu-item-object-page menu-item-183\"><a href=\"https://www.caberrycultivars.com/contact/\">Contact Us</a></li>\n</ul></nav><!-- end #main-nav -->\n</div><!-- end .main-nav-outer -->\n\n<span id=\"anchor-content-section\"></span><div class=\"main-title-wrapper\">\r\n\t\t<h1 class=\"main-page-title\">About Us</h1>\r\n\t\t</div><!-- end .main-title-wrapper -->        \r\n        <div class=\"page-section-outer\">\r\n        <div class=\"page-section\">\r\n        <div class=\"container-fluid\">\r\n        \r\n        <div class=\"row\">\r\n        <div class=\"col-xs-12\">\r\n        \r\n                \r\n        </div>\r\n        </div><!-- end .row -->\r\n        \r\n        </div><!-- end .container-fluid -->\r\n        </div><!-- end .page-section -->\r\n        </div><!-- end .page-section-outer -->\r\n        \r\n        <div class=\"footer-wrapper-outer-2\">\n<div class=\"footer-wrapper-outer\">\n<div id=\"footer-wrapper\">\n\n<div id=\"footer-logo\">\n<a href=\"/\"><img src=\"http://cultivars.wpenginepowered.com/wp-content/uploads/2023/07/ca-berry-cultivars-logo.png\" width=\"291\" title=\"California Berry Cultivars\" alt=\"California Berry Cultivars logo\" /></a>\n</div>\n\n<div id=\"footer-form-wrapper\" class=\"styled-form\">\n\n<div class=\"wpcf7 no-js\" id=\"wpcf7-f63-o1\" lang=\"en-US\" dir=\"ltr\" data-wpcf7-id=\"63\">\n<div class=\"screen-reader-response\"><p role=\"status\" aria-live=\"polite\" aria-atomic=\"true\"></p> <ul></ul></div>\n<form action=\"/about-us/#wpcf7-f63-o1\" method=\"post\" class=\"wpcf7-form init\" aria-label=\"Contact form\" novalidate=\"novalidate\" data-status=\"init\">\n<fieldset class=\"hidden-fields-container\"><input type=\"hidden\" name=\"_wpcf7\" value=\"63\" /><input type=\"hidden\" name=\"_wpcf7_version\" value=\"6.1.3\" /><input type=\"hidden\" name=\"_wpcf7_locale\" value=\"en_US\" /><input type=\"hidden\" name=\"_wpcf7_unit_tag\" value=\"wpcf7-f63-o1\" /><input type=\"hidden\" name=\"_wpcf7_container_post\" value=\"0\" /><input type=\"hidden\" name=\"_wpcf7_posted_data_hash\" value=\"\" /><input type=\"hi"
+  },
+  {
+    "pageName": "how-it-started",
+    "title": "How it all started - California Berry Cultivars",
+    "description": "",
+    "headings": [],
+    "paragraphs": [],
+    "links": [],
+    "images": [
+      {
+        "src": "https://cultivars.wpenginepowered.com/wp-content/uploads/2017/05/HiS_hanging-fruit.png",
+        "alt": ""
+      }
+    ],
+    "rawHtml": "\r\n        <div class=\"container his-bkgd\">\r\n<!--First Section-->\r\n        <div class=\"row his-box\">\r\n        \t<div class=\"col-sm-6\">\r\n\t\t\t\t\t\t\t\t\t\t<img src=\"https://cultivars.wpenginepowered.com/wp-content/uploads/2017/05/HiS_hanging-fruit.png\" alt=\"\" />\r\n\t\t\t\t\t\t\t"
+  },
+  {
+    "pageName": "partner",
+    "title": "Partners - California Berry Cultivars",
+    "description": "",
+    "headings": [
+      {
+        "level": 1,
+        "text": "California Berry Cultivars was formed in 2014 as a collaborative effort between stakeholders in the strawberry industry including:"
+      }
+    ],
+    "paragraphs": [],
+    "links": [],
+    "images": [],
+    "rawHtml": "\r\n        <div class=\"container\">\r\n        <div class=\"row partner-quote\">\r\n        <div class=\"col-xs-12\">\r\n        \r\n        <h1>California Berry Cultivars was formed in 2014 as a collaborative effort between stakeholders in the strawberry industry including:</h1>\n        \r\n        "
+  },
+  {
+    "pageName": "team",
+    "title": "Team - California Berry Cultivars",
+    "description": "",
+    "headings": [
+      {
+        "level": 1,
+        "text": "The California Berry Cultivars&nbsp;team consists of a mix of veterans and the next generation of strawberry cultivar developers and researchers."
+      }
+    ],
+    "paragraphs": [
+      "They have a collective 100+ years of experience in the strawberry industry and are committed to providing strawberry growers with the quality strawberries they want and need. The significant amount of experience within the CBC team is well-suited to conduct strawberry research in order to further the knowledge base required by the strawberry industry to protect and promote a quality, high-yielding, consumer-desirable product under the ever changing conditions of the field and market place."
+    ],
+    "links": [],
+    "images": [],
+    "rawHtml": "\r\n        <div class=\"container\">\r\n        <div class=\"row\">\r\n        <div class=\"col-xs-12\">\r\n        \r\n        <h1>The California Berry Cultivars&nbsp;team consists of a mix of veterans and the next generation of strawberry cultivar developers and researchers.</h1>\n<p>They have a collective 100+ years of experience in the strawberry industry and are committed to providing strawberry growers with the quality strawberries they want and need. The significant amount of experience within the CBC team is well-suited to conduct strawberry research in order to further the knowledge base required by the strawberry industry to protect and promote a quality, high-yielding, consumer-desirable product under the ever changing conditions of the field and market place.</p>\n        \r\n        "
+  },
+  {
+    "pageName": "faq",
+    "title": "FAQ - California Berry Cultivars",
+    "description": "",
+    "headings": [],
+    "paragraphs": [],
+    "links": [],
+    "images": [
+      {
+        "src": "https://cultivars.wpenginepowered.com/wp-content/uploads/2017/05/faq_icon_science.png",
+        "alt": ""
+      }
+    ],
+    "rawHtml": "\r\n        <div class=\"container\">\r\n        <div class=\"row\">\r\n        \r\n        \r\n        \r\n\r\n\t<div class=\"\">\r\n\r\n\t\r\n\t\t<div class=\"faq-box faq-white-box\">\r\n\r\n\r\n\t\t\t\t\t\t\t<div class=\"faq-icon faq-white\">\r\n\t\t\t\t\t<img src=\"https://cultivars.wpenginepowered.com/wp-content/uploads/2017/05/faq_icon_science.png\" alt=\"\" />\r\n\t\t\t\t"
+  },
+  {
+    "pageName": "breeding-program",
+    "title": "Breeding Program - California Berry Cultivars",
+    "description": "",
+    "headings": [
+      {
+        "level": 1,
+        "text": "Breeding Program"
+      }
+    ],
+    "paragraphs": [],
+    "links": [
+      {
+        "url": "#anchor-content-section",
+        "text": "Skip to Content"
+      },
+      {
+        "url": "/",
+        "text": "Home"
+      },
+      {
+        "url": "http://cultivars.cbcberry.com",
+        "text": "Cultivars"
+      },
+      {
+        "url": "#",
+        "text": "About Us"
+      },
+      {
+        "url": "https://www.caberrycultivars.com/about-us/how-it-all-started/",
+        "text": "How It Started"
+      },
+      {
+        "url": "https://www.caberrycultivars.com/about-us/partners/",
+        "text": "Partners"
+      },
+      {
+        "url": "https://www.caberrycultivars.com/about-us/team/",
+        "text": "Team"
+      },
+      {
+        "url": "https://www.caberrycultivars.com/about-us/faq/",
+        "text": "FAQs"
+      },
+      {
+        "url": "#",
+        "text": "Breeding Program"
+      },
+      {
+        "url": "https://www.caberrycultivars.com/breeding-program/philosophy/",
+        "text": "Philosophy"
+      },
+      {
+        "url": "https://www.caberrycultivars.com/breeding-program/current-efforts/",
+        "text": "Current Efforts"
+      },
+      {
+        "url": "https://www.caberrycultivars.com/breeding-program/innovating/",
+        "text": "Innovation"
+      },
+      {
+        "url": "https://www.caberrycultivars.com/newsroom/",
+        "text": "Newsroom"
+      },
+      {
+        "url": "https://www.caberrycultivars.com/contact/",
+        "text": "Contact Us"
+      },
+      {
+        "url": "https://www.caberrycultivars.com/about-us/how-it-all-started/",
+        "text": "About Us"
+      },
+      {
+        "url": "https://www.caberrycultivars.com/breeding-program/philosophy/",
+        "text": "Breeding Program"
+      },
+      {
+        "url": "https://www.caberrycultivars.com/newsroom/",
+        "text": "Newsroom"
+      },
+      {
+        "url": "https://www.caberrycultivars.com/contact/",
+        "text": "Contact Us"
+      }
+    ],
+    "images": [
+      {
+        "src": "http://cultivars.wpenginepowered.com/wp-content/uploads/2023/07/ca-berry-cultivars-logo.png",
+        "alt": ""
+      },
+      {
+        "src": "http://cultivars.wpenginepowered.com/wp-content/uploads/2023/07/ca-berry-cultivars-logo.png",
+        "alt": ""
+      }
+    ],
+    "rawHtml": "\n\n<a class=\"skip-to-content-link\" href=\"#anchor-content-section\">Skip to Content</a>\n\t\n   \n<div class=\"top-wrapper-outer\">\n<div id=\"top-wrapper\">\n\n\n\t<div id=\"main-logo\">\n\t<a href=\"/\"><img src=\"http://cultivars.wpenginepowered.com/wp-content/uploads/2023/07/ca-berry-cultivars-logo.png\" width=\"400\" title=\"California Berry Cultivars\" alt=\"California Berry Cultivars logo\" /></a>\n\t</div>\n\t\n            \n        <div class=\"breadcrumbs-nav\">\n        <ul>\n        <li><a href=\"/\">Home</a></li>\n        \n                <li>Breeding Program</li>\n        </ul>\n        </div><!-- end .breadcrumbs-nav -->\n    \n    \n\n<div id=\"mn-toggle-link\"><a href=\"javascript:void(0)\" title=\"Show Main Navigation\"></a></div>\n\n</div><!-- end #top-wrapper -->\n</div><!-- end .top-wrapper-outer -->\n\n<div class=\"main-nav-outer\">\n<div id=\"mn-toggle-link-2\"><a href=\"javascript:void(0)\" title=\"Hide Main Navigation\"></a></div>\n<nav id=\"main-nav\" role=\"navigation\">\n<ul id=\"menu-main-navigation\" class=\"menu\"><li id=\"menu-item-30746\" class=\"menu-item menu-item-type-custom menu-item-object-custom menu-item-30746\"><a href=\"http://cultivars.cbcberry.com\">Cultivars</a></li>\n<li id=\"menu-item-189\" class=\"menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-189\"><a href=\"#\">About Us</a>\n<ul class=\"sub-menu\">\n\t<li id=\"menu-item-187\" class=\"menu-item menu-item-type-post_type menu-item-object-page menu-item-187\"><a href=\"https://www.caberrycultivars.com/about-us/how-it-all-started/\">How It Started</a></li>\n\t<li id=\"menu-item-194\" class=\"menu-item menu-item-type-post_type menu-item-object-page menu-item-194\"><a href=\"https://www.caberrycultivars.com/about-us/partners/\">Partners</a></li>\n\t<li id=\"menu-item-196\" class=\"menu-item menu-item-type-post_type menu-item-object-page menu-item-196\"><a href=\"https://www.caberrycultivars.com/about-us/team/\">Team</a></li>\n\t<li id=\"menu-item-192\" class=\"menu-item menu-item-type-post_type menu-item-object-page menu-item-192\"><a href=\"https://www.caberrycultivars.com/about-us/faq/\">FAQs</a></li>\n</ul>\n</li>\n<li id=\"menu-item-190\" class=\"menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-190\"><a href=\"#\">Breeding Program</a>\n<ul class=\"sub-menu\">\n\t<li id=\"menu-item-195\" class=\"menu-item menu-item-type-post_type menu-item-object-page menu-item-195\"><a href=\"https://www.caberrycultivars.com/breeding-program/philosophy/\">Philosophy</a></li>\n\t<li id=\"menu-item-191\" class=\"menu-item menu-item-type-post_type menu-item-object-page menu-item-191\"><a href=\"https://www.caberrycultivars.com/breeding-program/current-efforts/\">Current Efforts</a></li>\n\t<li id=\"menu-item-193\" class=\"menu-item menu-item-type-post_type menu-item-object-page menu-item-193\"><a href=\"https://www.caberrycultivars.com/breeding-program/innovating/\">Innovation</a></li>\n</ul>\n</li>\n<li id=\"menu-item-230\" class=\"menu-item menu-item-type-post_type menu-item-object-page menu-item-230\"><a href=\"https://www.caberrycultivars.com/newsroom/\">Newsroom</a></li>\n<li id=\"menu-item-183\" class=\"menu-item menu-item-type-post_type menu-item-object-page menu-item-183\"><a href=\"https://www.caberrycultivars.com/contact/\">Contact Us</a></li>\n</ul></nav><!-- end #main-nav -->\n</div><!-- end .main-nav-outer -->\n\n<span id=\"anchor-content-section\"></span><div class=\"main-title-wrapper\">\r\n\t\t<h1 class=\"main-page-title\">Breeding Program</h1>\r\n\t\t</div><!-- end .main-title-wrapper -->        \r\n        <div class=\"page-section-outer\">\r\n        <div class=\"page-section\">\r\n        <div class=\"container-fluid\">\r\n        \r\n        <div class=\"row\">\r\n        <div class=\"col-xs-12\">\r\n        \r\n                \r\n        </div>\r\n        </div><!-- end .row -->\r\n        \r\n        </div><!-- end .container-fluid -->\r\n        </div><!-- end .page-section -->\r\n        </div><!-- end .page-section-outer -->\r\n        \r\n        <div class=\"footer-wrapper-outer-2\">\n<div class=\"footer-wrapper-outer\">\n<div id=\"footer-wrapper\">\n\n<div id=\"footer-logo\">\n<a href=\"/\"><img src=\"http://cultivars.wpenginepowered.com/wp-content/uploads/2023/07/ca-berry-cultivars-logo.png\" width=\"291\" title=\"California Berry Cultivars\" alt=\"California Berry Cultivars logo\" /></a>\n</div>\n\n<div id=\"footer-form-wrapper\" class=\"styled-form\">\n\n<div class=\"wpcf7 no-js\" id=\"wpcf7-f63-o1\" lang=\"en-US\" dir=\"ltr\" data-wpcf7-id=\"63\">\n<div class=\"screen-reader-response\"><p role=\"status\" aria-live=\"polite\" aria-atomic=\"true\"></p> <ul></ul></div>\n<form action=\"/breeding-program/#wpcf7-f63-o1\" method=\"post\" class=\"wpcf7-form init\" aria-label=\"Contact form\" novalidate=\"novalidate\" data-status=\"init\">\n<fieldset class=\"hidden-fields-container\"><input type=\"hidden\" name=\"_wpcf7\" value=\"63\" /><input type=\"hidden\" name=\"_wpcf7_version\" value=\"6.1.3\" /><input type=\"hidden\" name=\"_wpcf7_locale\" value=\"en_US\" /><input type=\"hidden\" name=\"_wpcf7_unit_tag\" value=\"wpcf7-f63-o1\" /><input type=\"hidden\" name=\"_wpcf7_container_post\" value=\"0\" /><input type=\"hidden\" name=\"_wpcf7_posted_data_hash\" va"
+  },
+  {
+    "pageName": "philosophy",
+    "title": "Philosophy - California Berry Cultivars",
+    "description": "",
+    "headings": [
+      {
+        "level": 1,
+        "text": "IF YOU’RE NOT MOVING FORWARD YOU’RE FALLING BEHIND."
+      }
+    ],
+    "paragraphs": [
+      "Nothing could be more true in modern agriculture. A key component to moving forward is consistent development of cultivars that are superior to their predecessors."
+    ],
+    "links": [],
+    "images": [],
+    "rawHtml": "\r\n        <div class=\"container\">\r\n        <div class=\"row\">\r\n        <div class=\"col-xs-12\">\r\n        \r\n        <h1>IF YOU’RE NOT MOVING FORWARD YOU’RE FALLING BEHIND.</h1>\n<p>Nothing could be more true in modern agriculture. A key component to moving forward is consistent development of cultivars that are superior to their predecessors.</p>\n        \r\n        "
+  },
+  {
+    "pageName": "current-effort",
+    "title": "Current Efforts - California Berry Cultivars",
+    "description": "",
+    "headings": [],
+    "paragraphs": [
+      "Currently, our team at California Berry Cultivars is engaged in developing new cultivars for use in both short-day and day-neutral markets. Our efforts focus on the balanced development of cultivars with superior yield, quality, and environmental tolerance traits."
+    ],
+    "links": [],
+    "images": [
+      {
+        "src": "https://cultivars.wpenginepowered.com/wp-content/uploads/2017/05/CurrentEfforts_ghcrosses_edited2.png",
+        "alt": ""
+      }
+    ],
+    "rawHtml": "\r\n        <div class=\"container\">\r\n        <div class=\"row\">\r\n        \t<div class=\"col-sm-6 col-md-3 ce-box\">\r\n\t\t\t\t\t\t\t\t\t\t<img src=\"https://cultivars.wpenginepowered.com/wp-content/uploads/2017/05/CurrentEfforts_ghcrosses_edited2.png\" alt=\"\" />\r\n\t\t\t\t        \t\t<p>Currently, our team at California Berry Cultivars is engaged in developing new cultivars for use in both short-day and day-neutral markets. Our efforts focus on the balanced development of cultivars with superior yield, quality, and environmental tolerance traits.</p>\n\t\t\t"
+  },
+  {
+    "pageName": "innovation",
+    "title": "Innovating - California Berry Cultivars",
+    "description": "",
+    "headings": [],
+    "paragraphs": [],
+    "links": [],
+    "images": [
+      {
+        "src": "https://cultivars.wpenginepowered.com/wp-content/uploads/2017/04/Innovating_people.png",
+        "alt": ""
+      }
+    ],
+    "rawHtml": "\r\n        <div class=\"container\">\r\n        \r\n<!--First Section-->\r\n        <div class=\"row innov-box\">\r\n        \t<div class=\"col-sm-6 col-sm-push-6\">\r\n\t\t\t\t\t\t\t\t\t\t<img src=\"https://cultivars.wpenginepowered.com/wp-content/uploads/2017/04/Innovating_people.png\" alt=\"\" />\r\n\t\t\t\t\t\t\t"
+  },
+  {
+    "pageName": "newsroom",
+    "title": "Newsroom - California Berry Cultivars",
+    "description": "",
+    "headings": [],
+    "paragraphs": [
+      "Stay up to date on what&#8217;s happening in our industry!"
+    ],
+    "links": [
+      {
+        "url": "http://blog.agratech.com/?p=855",
+        "text": "California Berry Cultivars is a World-Class \"Strawberry Start-Up\""
+      },
+      {
+        "url": "http://ucanr.edu/blogs/strawberries_caneberries/",
+        "text": "UC-ANR Strawberry & Caneberry Blog"
+      },
+      {
+        "url": "http://www.freshplaza.com/news",
+        "text": "Fresh Plaza"
+      },
+      {
+        "url": "http://www.thepacker.com/",
+        "text": "The Packer"
+      },
+      {
+        "url": "http://www.thepacker.com/shipping-profiles/southern-california-strawberries/california-strawberry-industry-adapts-change",
+        "text": "California Strawberry Industry Adapts to Change"
+      },
+      {
+        "url": "http://www.thepacker.com/shipping-profiles/southern-california-strawberries/growers-expect-good-strawberry-crop-despite-rain",
+        "text": "Growers Expect Good Strawberry Crop despite Rain"
+      },
+      {
+        "url": "http://www.freshplaza.com/article/170376/Egypt-Strawberry-sector-just-keeps-on-growing-and-getting-stronger",
+        "text": "Strawberry Sector Just Keeps on Growing and Getting Stronger"
+      },
+      {
+        "url": "http://www.capitalpress.com/California/20170113/strawberry-production-stabilizes-china-begins-imports",
+        "text": "Strawberry Production Stabilizes; China Begins Imports"
+      }
+    ],
+    "images": [],
+    "rawHtml": "\r\n        <div class=\"container-fluid\">\r\n        \r\n        <div class=\"row\">\r\n        <div class=\"col-xs-12\">\r\n        \r\n        <p>Stay up to date on what&#8217;s happening in our industry!</p>\n<h4>CBC Related News</h4><ul>\r\n\t\t\t\t\t\t\t<li><a href=\"http://blog.agratech.com/?p=855\" target=\"_blank\">California Berry Cultivars is a World-Class \"Strawberry Start-Up\"</a></li></ul><h4>Industry Related News</h4><ul>\r\n\t\t\t\t\t\t\t<li><a href=\"http://ucanr.edu/blogs/strawberries_caneberries/\" target=\"_blank\">UC-ANR Strawberry & Caneberry Blog</a></li>\r\n\t\t\t\t\t\t\t<li><a href=\"http://www.freshplaza.com/news\" target=\"_blank\">Fresh Plaza</a></li>\r\n\t\t\t\t\t\t\t<li><a href=\"http://www.thepacker.com/\" target=\"_blank\">The Packer</a></li></ul><h4>Strawberries in the News</h4><ul>\r\n\t\t\t\t\t\t\t<li><a href=\"http://www.thepacker.com/shipping-profiles/southern-california-strawberries/california-strawberry-industry-adapts-change\" target=\"_blank\">California Strawberry Industry Adapts to Change</a></li>\r\n\t\t\t\t\t\t\t<li><a href=\"http://www.thepacker.com/shipping-profiles/southern-california-strawberries/growers-expect-good-strawberry-crop-despite-rain\" target=\"_blank\">Growers Expect Good Strawberry Crop despite Rain</a></li>\r\n\t\t\t\t\t\t\t<li><a href=\"http://www.freshplaza.com/article/170376/Egypt-Strawberry-sector-just-keeps-on-growing-and-getting-stronger\" target=\"_blank\">Strawberry Sector Just Keeps on Growing and Getting Stronger</a></li>\r\n\t\t\t\t\t\t\t<li><a href=\"http://www.capitalpress.com/California/20170113/strawberry-production-stabilizes-china-begins-imports\" target=\"_blank\">Strawberry Production Stabilizes; China Begins Imports</a></li></ul>        \r\n        "
+  },
+  {
+    "pageName": "contact-us",
+    "title": "Contact - California Berry Cultivars",
+    "description": "",
+    "headings": [],
+    "paragraphs": [
+      "For questions or to provide feedback, please refer to the following:"
+    ],
+    "links": [],
+    "images": [],
+    "rawHtml": "\n        <div class=\"container-fluid\">\n        \n        <div class=\"row\">\n        <div class=\"col-xs-12\">\n        <div class=\"contact-inner-col-4\">\n        <p>For questions or to provide feedback, please refer to the following:</p>\n        "
+  }
+]

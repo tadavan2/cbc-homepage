@@ -1,0 +1,110 @@
+{
+  "scrapedAt": "2025-11-24T01:01:00.504Z",
+  "totalPages": 13,
+  "pages": [
+    {
+      "name": "home",
+      "title": "Home - California Berry Cultivars",
+      "headingsCount": 0,
+      "paragraphsCount": 1,
+      "linksCount": 0,
+      "imagesCount": 0
+    },
+    {
+      "name": "cultivar",
+      "title": "",
+      "headingsCount": 0,
+      "paragraphsCount": 0,
+      "linksCount": 0,
+      "imagesCount": 0
+    },
+    {
+      "name": "about-us",
+      "title": "About Us - California Berry Cultivars",
+      "headingsCount": 1,
+      "paragraphsCount": 0,
+      "linksCount": 18,
+      "imagesCount": 2
+    },
+    {
+      "name": "how-it-started",
+      "title": "How it all started - California Berry Cultivars",
+      "headingsCount": 0,
+      "paragraphsCount": 0,
+      "linksCount": 0,
+      "imagesCount": 1
+    },
+    {
+      "name": "partner",
+      "title": "Partners - California Berry Cultivars",
+      "headingsCount": 1,
+      "paragraphsCount": 0,
+      "linksCount": 0,
+      "imagesCount": 0
+    },
+    {
+      "name": "team",
+      "title": "Team - California Berry Cultivars",
+      "headingsCount": 1,
+      "paragraphsCount": 1,
+      "linksCount": 0,
+      "imagesCount": 0
+    },
+    {
+      "name": "faq",
+      "title": "FAQ - California Berry Cultivars",
+      "headingsCount": 0,
+      "paragraphsCount": 0,
+      "linksCount": 0,
+      "imagesCount": 1
+    },
+    {
+      "name": "breeding-program",
+      "title": "Breeding Program - California Berry Cultivars",
+      "headingsCount": 1,
+      "paragraphsCount": 0,
+      "linksCount": 18,
+      "imagesCount": 2
+    },
+    {
+      "name": "philosophy",
+      "title": "Philosophy - California Berry Cultivars",
+      "headingsCount": 1,
+      "paragraphsCount": 1,
+      "linksCount": 0,
+      "imagesCount": 0
+    },
+    {
+      "name": "current-effort",
+      "title": "Current Efforts - California Berry Cultivars",
+      "headingsCount": 0,
+      "paragraphsCount": 1,
+      "linksCount": 0,
+      "imagesCount": 1
+    },
+    {
+      "name": "innovation",
+      "title": "Innovating - California Berry Cultivars",
+      "headingsCount": 0,
+      "paragraphsCount": 0,
+      "linksCount": 0,
+      "imagesCount": 1
+    },
+    {
+      "name": "newsroom",
+      "title": "Newsroom - California Berry Cultivars",
+      "headingsCount": 0,
+      "paragraphsCount": 1,
+      "linksCount": 8,
+      "imagesCount": 0
+    },
+    {
+      "name": "contact-us",
+      "title": "Contact - California Berry Cultivars",
+      "headingsCount": 0,
+      "paragraphsCount": 1,
+      "linksCount": 0,
+      "imagesCount": 0
+    }
+  ]
+}
