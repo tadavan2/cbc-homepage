@@ -1,0 +1,7 @@
+# California Berry Cultivars - robots.txt
+User-agent: *
+Allow: /
+
+# Sitemap
+Sitemap: https://cbcberry.com/sitemap.xml
+
