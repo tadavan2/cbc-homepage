@@ -121,7 +121,7 @@ export default function Home() {
           <div className={`grid grid-cols-1 md:grid-cols-3 gap-8 ${activeSection >= 1 ? 'animate-visible' : ''}`}>
             <Link 
               href="/cultivar-development"
-              className={`bg-white/20 backdrop-blur-sm p-8 rounded-2xl border-2 border-white/30 hover:bg-white/30 hover:scale-[1.02] transition-all cursor-pointer block
+              className={`bg-white/20 backdrop-blur-sm p-8 rounded-2xl border-2 border-white/30 hover:bg-white/30 hover:scale-[1.02] transition-all cursor-pointer block mt-5 md:mt-0
                 ${activeSection >= 1 ? 'animate-slide-in' : 'opacity-0'}
               `}
               style={{ animationDelay: '0.1s' }}
