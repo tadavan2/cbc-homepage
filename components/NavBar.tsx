@@ -148,7 +148,7 @@ export default function NavBar() {
                 
                 {/* Social */}
                 <a
-                  href="https://www.linkedin.com/company/california-berry-cultivars"
+                  href="https://www.linkedin.com/company/california-berry-cultivars-llc"
                   target="_blank"
                   rel="noopener noreferrer"
                   onClick={() => setIsOpen(false)}
