@@ -90,7 +90,7 @@ export default function ContactPage() {
             </div>
             
             {/* Contact Form */}
-            <div className="bg-white/10 backdrop-blur-sm p-6 md:p-8 rounded-2xl border-2 border-white/20" style={{ marginBottom: '80px' }}>
+            <div className="bg-white/10 backdrop-blur-sm p-6 md:p-8 rounded-2xl border-2 border-white/20" style={{ marginBottom: '100px' }}>
               <ContactForm />
             </div>
           </div>

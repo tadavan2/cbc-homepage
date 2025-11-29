@@ -77,10 +77,10 @@ export default function AboutPage() {
       className="scroll-snap-container"
       style={{ scrollSnapType: 'y mandatory', overflowY: 'auto' }}
     >
-      {/* Section 1: Hero with Video Placeholder - 30% */}
+      {/* Section 1: Hero with Video Placeholder - 20% */}
       <section 
         id="hero" 
-        className="scroll-snap-section bg-[#355e82] flex items-start md:items-center justify-center pt-[10vh] md:pt-0"
+        className="scroll-snap-section bg-[#355e82] flex items-start md:items-center justify-center pt-[5vh] md:pt-0"
       >
         <div className="container px-4 py-12 md:py-20" style={{ paddingTop: '60px' }}>
           <div className={`max-w-4xl mx-auto text-center ${activeSection >= 0 ? 'animate-fade-in' : 'opacity-0'}`}>
@@ -201,7 +201,7 @@ export default function AboutPage() {
       {/* Section 5: Our Partners */}
       <section 
         id="partners" 
-        className="scroll-snap-section bg-[#fdbd51] flex items-start md:items-center justify-center pt-[10vh] md:pt-0"
+        className="scroll-snap-section bg-[#fdbd51] flex items-start md:items-center justify-center pt-[5vh] md:pt-0"
       >
         <div className="container px-4 py-10 md:py-16" style={{ paddingTop: '50px' }}>
           <div className={`max-w-5xl mx-auto ${activeSection >= 4 ? 'animate-fade-in' : 'opacity-0'}`}>

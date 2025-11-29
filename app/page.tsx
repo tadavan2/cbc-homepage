@@ -147,7 +147,7 @@ export default function Home() {
 
       {/* What We Do - Gradient section */}
       <section 
-        className="scroll-snap-section flex items-start md:items-center pt-[15vh] md:pt-0"
+        className="scroll-snap-section flex items-start md:items-center pt-[10vh] md:pt-0"
         style={{ background: 'linear-gradient(to bottom right, #355e82 0%, #fdbd51 100%)' }}
       >
         <div className="container px-4 py-12 md:py-20" style={{ paddingTop: '50px' }}>
@@ -205,7 +205,7 @@ export default function Home() {
       </section>
 
       {/* Featured Cultivars - Medium red section */}
-      <section id="cultivars" className="scroll-snap-section bg-[#c93834] flex items-start md:items-center pt-[10vh] md:pt-0">
+      <section id="cultivars" className="scroll-snap-section bg-[#c93834] flex items-start md:items-center pt-[15vh] md:pt-0">
         <div className="container px-4 py-20" style={{ paddingTop: '45px' }}>
           <h2 className={`text-4xl md:text-5xl lg:text-6xl font-bold mb-4 text-center text-white
             ${activeSection >= 2 ? 'animate-fade-in' : 'opacity-0'}
@@ -255,7 +255,7 @@ export default function Home() {
       </section>
 
       {/* Breeding Philosophy Teaser - Dark blue section */}
-      <section className="scroll-snap-section bg-[#355e82] flex items-start md:items-center pt-[15vh] md:pt-0">
+      <section className="scroll-snap-section bg-[#355e82] flex items-start md:items-center pt-[20vh] md:pt-0">
         <div className="container px-4 py-20">
           <div className={`max-w-3xl mx-auto text-center ${activeSection >= 3 ? 'animate-fade-in' : 'opacity-0'}`}>
             <blockquote className="text-3xl md:text-4xl lg:text-5xl font-bold italic mb-6 text-[#fdbd51] leading-tight">
@@ -276,7 +276,7 @@ export default function Home() {
       </section>
 
       {/* About Teaser - White section with colored accent */}
-      <section className="scroll-snap-section bg-white flex items-start md:items-center pt-[15vh] md:pt-0 relative overflow-hidden">
+      <section className="scroll-snap-section bg-white flex items-start md:items-center pt-[20vh] md:pt-0 relative overflow-hidden">
         <div className="absolute top-0 left-0 w-full h-32 bg-gradient-to-b from-[#355e82] to-transparent"></div>
         <div className="container px-4 py-20 relative z-10">
           <div className={`max-w-3xl mx-auto text-center ${activeSection >= 4 ? 'animate-fade-in' : 'opacity-0'}`}>
@@ -297,7 +297,7 @@ export default function Home() {
       </section>
 
       {/* Contact - Light blue section */}
-      <section className="scroll-snap-section bg-[#c4daf4] flex items-start md:items-center pt-[15vh] md:pt-0">
+      <section className="scroll-snap-section bg-[#c4daf4] flex items-start md:items-center pt-[20vh] md:pt-0">
         <div className="container px-4 py-20">
           <div className={`max-w-2xl mx-auto text-center ${activeSection >= 5 ? 'animate-fade-in' : 'opacity-0'}`}>
             <h2 className="text-3xl md:text-4xl font-bold mb-6 text-[#355e82]">Get in Touch</h2>
