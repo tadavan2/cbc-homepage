@@ -1,65 +1,172 @@
+'use client';
+
+import { useState, useEffect, useRef } from 'react';
 import Link from 'next/link';
 import ContactForm from '@/components/ContactForm';
+import ApplicationForm from '@/components/ApplicationForm';
+
+/**
+ * Contact Page - Multi-section scroll-snap layout
+ * 
+ * Sections:
+ * 1. Contact Us (form)
+ * 2. Working at CBC / Careers (application form)
+ */
+
+// Section mapping for hash navigation
+const sectionMap: Record<string, number> = {
+  'contact': 0,
+  'careers': 1,
+};
 
 export default function ContactPage() {
-  return (
-    <div className="min-h-screen pt-10 md:pt-12">
-      {/* Hero Section */}
-      <section className="relative min-h-[60vh] flex items-center justify-center overflow-hidden bg-[#6E903C]">
-        <div className="container relative z-10 py-20">
-          <div className="max-w-4xl mx-auto text-center px-4">
-            <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold mb-6 leading-tight">
-              <span className="text-white">Contact</span>
-              <br />
-              <span className="text-[#fdbd51]">Us</span>
-            </h1>
-            <p className="text-lg md:text-xl text-white/90 max-w-2xl mx-auto leading-relaxed">
-              Questions about our cultivars? Ready to explore partnership opportunities? Get in touch.
-            </p>
-          </div>
-        </div>
-      </section>
+  const [activeSection, setActiveSection] = useState(0);
+  const containerRef = useRef<HTMLDivElement>(null);
+  const [isReady, setIsReady] = useState(false);
 
-      {/* Contact Form Section */}
-      <section className="bg-white py-20 md:py-32">
-        <div className="container px-4">
-          <div className="max-w-3xl mx-auto">
-            <div className="bg-[#fdbd51]/10 p-8 md:p-12 rounded-2xl border-2 border-[#6E903C]/10">
+  // Handle hash navigation on mount
+  useEffect(() => {
+    const hash = window.location.hash.slice(1);
+    if (hash) {
+      const sectionIndex = sectionMap[hash];
+      if (sectionIndex !== undefined) {
+        setActiveSection(sectionIndex);
+      }
+    }
+    setIsReady(true);
+  }, []);
+
+  // Scroll to hash section after layout is ready
+  useEffect(() => {
+    if (!isReady) return;
+    
+    const hash = window.location.hash.slice(1);
+    if (hash) {
+      const targetSection = document.getElementById(hash);
+      if (targetSection) {
+        targetSection.scrollIntoView({ behavior: 'instant', block: 'start' });
+      }
+    }
+  }, [isReady]);
+
+  // Track which section is visible on scroll
+  useEffect(() => {
+    const container = containerRef.current;
+    if (!container) return;
+
+    const handleScroll = () => {
+      const scrollTop = container.scrollTop;
+      const sectionHeight = window.innerHeight;
+      const newSection = Math.round(scrollTop / sectionHeight);
+      setActiveSection(newSection);
+    };
+
+    container.addEventListener('scroll', handleScroll, { passive: true });
+    return () => container.removeEventListener('scroll', handleScroll);
+  }, []);
+
+  return (
+    <div 
+      ref={containerRef}
+      className="scroll-snap-container"
+      style={{ scrollSnapType: 'y mandatory', overflowY: 'auto' }}
+    >
+      {/* Section 1: Contact Us */}
+      <section 
+        id="contact" 
+        className="scroll-snap-section bg-[#355e82] flex items-center justify-center"
+      >
+        <div className="container px-4 py-12 md:py-20" style={{ paddingTop: '60px' }}>
+          <div className={`max-w-3xl mx-auto ${activeSection >= 0 ? 'animate-fade-in' : 'opacity-0'}`}>
+            <div className="text-center mb-10">
+              <p className="text-[#fdbd51] uppercase tracking-[0.2em] text-xs md:text-sm mb-6 font-semibold">
+                Get In Touch
+              </p>
+              <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold mb-6 leading-tight text-white">
+                Contact Us
+              </h1>
+              <p className="text-lg md:text-xl text-white/90 max-w-xl mx-auto leading-relaxed">
+                Questions about our cultivars? Ready to explore partnership opportunities?
+              </p>
+            </div>
+            
+            {/* Contact Form */}
+            <div className="bg-white/10 backdrop-blur-sm p-6 md:p-8 rounded-2xl border-2 border-white/20">
               <ContactForm />
+            </div>
+            
+            {/* Office Location */}
+            <div className="mt-8 text-center">
+              <p className="text-white/70 text-sm uppercase tracking-wider mb-2">Office Location</p>
+              <p className="text-white/90">
+                818 E French Camp Rd, French Camp, CA 95231
+              </p>
             </div>
           </div>
         </div>
-      </section>
-
-      {/* Office Location Section */}
-      <section className="bg-[#6E903C] py-16 md:py-20">
-        <div className="container px-4">
-          <div className="max-w-3xl mx-auto text-center">
-            <h3 className="text-2xl font-bold mb-4 text-white">Office Location</h3>
-            <p className="text-white/90 text-lg">
-              818 E French Camp Rd<br />
-              French Camp, CA 95231
-            </p>
-          </div>
+        
+        {/* Scroll indicator */}
+        <div className="absolute bottom-8 left-1/2 -translate-x-1/2 animate-bounce">
+          <svg className="w-6 h-6 text-white/60" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 14l-7 7m0 0l-7-7m7 7V3" />
+          </svg>
         </div>
       </section>
 
-      {/* CTA Section */}
-      <section className="bg-[#c93834] py-20 md:py-32">
-        <div className="container px-4">
-          <div className="max-w-3xl mx-auto text-center">
-            <h2 className="text-4xl md:text-5xl font-bold mb-6 text-white">Explore Our Cultivars</h2>
-            <p className="text-lg md:text-xl text-white/90 mb-8 leading-relaxed">
-              Learn more about our breeding programs and available varieties.
-            </p>
-            <a
-              href="https://cultivars.cbcberry.com"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="bg-[#fdbd51] text-[#6E903C] px-8 py-4 rounded-full font-bold uppercase tracking-wider text-sm hover:bg-[#fdbd51]/90 transition-all hover:scale-105 inline-block"
-            >
-              View Cultivar Explorer
-            </a>
+      {/* Section 2: Working at CBC / Careers */}
+      <section 
+        id="careers" 
+        className="scroll-snap-section bg-[#6E903C] flex items-center justify-center"
+      >
+        <div className="container px-4 py-12 md:py-20" style={{ paddingTop: '60px' }}>
+          <div className={`max-w-4xl mx-auto ${activeSection >= 1 ? 'animate-fade-in' : 'opacity-0'}`}>
+            <div className="text-center mb-6 md:mb-10">
+              <h2 className="text-3xl md:text-5xl lg:text-6xl font-bold mb-4 leading-tight text-white">
+                Working at CBC
+              </h2>
+              <p className="text-base md:text-lg text-white/90 max-w-2xl mx-auto leading-relaxed">
+                We're always looking for talented individuals passionate about agriculture 
+                and plant science to join our team.
+              </p>
+            </div>
+
+            {/* Why Work Here - No emojis */}
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-3 mb-6">
+              <div className="bg-white/10 backdrop-blur-sm p-4 rounded-xl border border-white/20 text-center">
+                <h3 className="text-base font-bold text-white mb-1">Meaningful Work</h3>
+                <p className="text-white/80 text-xs">
+                  Develop cultivars that feed communities worldwide.
+                </p>
+              </div>
+              <div className="bg-white/10 backdrop-blur-sm p-4 rounded-xl border border-white/20 text-center">
+                <h3 className="text-base font-bold text-white mb-1">Cutting-Edge Science</h3>
+                <p className="text-white/80 text-xs">
+                  Advanced breeding techniques and pathology research.
+                </p>
+              </div>
+              <div className="bg-white/10 backdrop-blur-sm p-4 rounded-xl border border-white/20 text-center">
+                <h3 className="text-base font-bold text-white mb-1">Collaborative Culture</h3>
+                <p className="text-white/80 text-xs">
+                  Industry veterans and rising talent working together.
+                </p>
+              </div>
+            </div>
+
+            {/* Current Openings Link */}
+            <div className="text-center mb-6">
+              <a 
+                href="mailto:careers@cbcberry.com?subject=Current%20Openings%20Inquiry"
+                className="text-[#fdbd51] uppercase tracking-wider text-sm font-bold hover:text-white transition-colors inline-flex items-center gap-2"
+              >
+                Inquire About Current Openings →
+              </a>
+            </div>
+
+            {/* Application Form */}
+            <div className="bg-white/10 backdrop-blur-sm p-5 md:p-6 rounded-2xl border-2 border-white/20">
+              <h3 className="text-lg font-bold text-white mb-4 text-center">Submit Your Application</h3>
+              <ApplicationForm />
+            </div>
           </div>
         </div>
       </section>

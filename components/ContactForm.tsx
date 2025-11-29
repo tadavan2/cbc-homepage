@@ -69,12 +69,12 @@ export default function ContactForm() {
 
   if (isSuccess) {
     return (
-      <div className="bg-[#fdbd51]/10 p-8 rounded-2xl border-2 border-[#fdbd51] text-center">
-        <div className="text-2xl mb-2">✓</div>
-        <div className="text-lg font-bold text-[#6E903C] mb-2">
+      <div className="bg-white/20 p-8 rounded-2xl border-2 border-white/40 text-center">
+        <div className="text-4xl mb-4">✓</div>
+        <div className="text-xl font-bold text-white mb-2">
           Message Sent Successfully!
         </div>
-        <div className="text-[#6E903C]/80">
+        <div className="text-white/80">
           We'll get back to you within 24-48 hours.
         </div>
       </div>
@@ -82,10 +82,10 @@ export default function ContactForm() {
   }
 
   return (
-    <form onSubmit={handleSubmit} className="space-y-6">
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+    <form onSubmit={handleSubmit} className="space-y-5">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
         <div>
-          <label className="block text-sm font-semibold text-[#6E903C] mb-2">
+          <label className="block text-sm font-semibold text-white mb-2">
             Name *
           </label>
           <input
@@ -94,11 +94,12 @@ export default function ContactForm() {
             value={formData.name}
             onChange={handleInputChange}
             required
-            className="w-full px-4 py-3 border-2 border-[#6E903C]/20 rounded-lg focus:outline-none focus:border-[#c93834] transition-colors text-[#6E903C]"
+            className="w-full px-4 py-3 bg-white/10 border-2 border-white/20 rounded-lg focus:outline-none focus:border-[#fdbd51] transition-colors text-white placeholder-white/50"
+            placeholder="Your full name"
           />
         </div>
         <div>
-          <label className="block text-sm font-semibold text-[#6E903C] mb-2">
+          <label className="block text-sm font-semibold text-white mb-2">
             Email *
           </label>
           <input
@@ -107,14 +108,15 @@ export default function ContactForm() {
             value={formData.email}
             onChange={handleInputChange}
             required
-            className="w-full px-4 py-3 border-2 border-[#6E903C]/20 rounded-lg focus:outline-none focus:border-[#c93834] transition-colors text-[#6E903C]"
+            className="w-full px-4 py-3 bg-white/10 border-2 border-white/20 rounded-lg focus:outline-none focus:border-[#fdbd51] transition-colors text-white placeholder-white/50"
+            placeholder="your@email.com"
           />
         </div>
       </div>
 
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
         <div>
-          <label className="block text-sm font-semibold text-[#6E903C] mb-2">
+          <label className="block text-sm font-semibold text-white mb-2">
             Company
           </label>
           <input
@@ -122,11 +124,12 @@ export default function ContactForm() {
             name="company"
             value={formData.company}
             onChange={handleInputChange}
-            className="w-full px-4 py-3 border-2 border-[#6E903C]/20 rounded-lg focus:outline-none focus:border-[#c93834] transition-colors text-[#6E903C]"
+            className="w-full px-4 py-3 bg-white/10 border-2 border-white/20 rounded-lg focus:outline-none focus:border-[#fdbd51] transition-colors text-white placeholder-white/50"
+            placeholder="Company name"
           />
         </div>
         <div>
-          <label className="block text-sm font-semibold text-[#6E903C] mb-2">
+          <label className="block text-sm font-semibold text-white mb-2">
             Phone
           </label>
           <input
@@ -134,13 +137,14 @@ export default function ContactForm() {
             name="phone"
             value={formData.phone}
             onChange={handleInputChange}
-            className="w-full px-4 py-3 border-2 border-[#6E903C]/20 rounded-lg focus:outline-none focus:border-[#c93834] transition-colors text-[#6E903C]"
+            className="w-full px-4 py-3 bg-white/10 border-2 border-white/20 rounded-lg focus:outline-none focus:border-[#fdbd51] transition-colors text-white placeholder-white/50"
+            placeholder="(555) 123-4567"
           />
         </div>
       </div>
 
       <div>
-        <label className="block text-sm font-semibold text-[#6E903C] mb-2">
+        <label className="block text-sm font-semibold text-white mb-2">
           Growing Region
         </label>
         <input
@@ -149,12 +153,12 @@ export default function ContactForm() {
           value={formData.region}
           onChange={handleInputChange}
           placeholder="e.g., California, Mexico, etc."
-          className="w-full px-4 py-3 border-2 border-[#6E903C]/20 rounded-lg focus:outline-none focus:border-[#c93834] transition-colors text-[#6E903C]"
+          className="w-full px-4 py-3 bg-white/10 border-2 border-white/20 rounded-lg focus:outline-none focus:border-[#fdbd51] transition-colors text-white placeholder-white/50"
         />
       </div>
 
       <div>
-        <label className="block text-sm font-semibold text-[#6E903C] mb-2">
+        <label className="block text-sm font-semibold text-white mb-2">
           Message *
         </label>
         <textarea
@@ -162,19 +166,19 @@ export default function ContactForm() {
           value={formData.message}
           onChange={handleInputChange}
           required
-          rows={6}
-          className="w-full px-4 py-3 border-2 border-[#6E903C]/20 rounded-lg focus:outline-none focus:border-[#c93834] transition-colors text-[#6E903C] resize-none"
+          rows={5}
+          className="w-full px-4 py-3 bg-white/10 border-2 border-white/20 rounded-lg focus:outline-none focus:border-[#fdbd51] transition-colors text-white placeholder-white/50 resize-none"
         />
       </div>
 
       <button
         type="submit"
         disabled={isSubmitting}
-        className="w-full bg-[#c93834] text-white px-8 py-4 rounded-full font-bold uppercase tracking-wider text-sm hover:bg-[#c93834]/90 transition-all disabled:opacity-50 disabled:cursor-not-allowed"
+        className="w-full bg-[#fdbd51] text-[#355e82] px-8 py-4 rounded-full font-bold uppercase tracking-wider text-sm hover:bg-[#fdbd51]/90 transition-all disabled:opacity-50 disabled:cursor-not-allowed"
       >
         {isSubmitting ? (
           <span className="flex items-center justify-center gap-2">
-            <span className="w-4 h-4 border-2 border-white border-t-transparent rounded-full animate-spin"></span>
+            <span className="w-4 h-4 border-2 border-[#355e82] border-t-transparent rounded-full animate-spin"></span>
             Sending...
           </span>
         ) : (

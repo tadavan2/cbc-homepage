@@ -82,7 +82,7 @@ export default function BreedingPage() {
         id="cultivar-development" 
         className="scroll-snap-section bg-[#6E903C] flex items-center justify-center"
       >
-        <div className="container px-4 py-20">
+        <div className="container px-4 py-12 md:py-20" style={{ paddingTop: '60px' }}>
           <div className={`max-w-4xl mx-auto text-center ${activeSection >= 0 ? 'animate-fade-in' : 'opacity-0'}`}>
             <p className="text-white/80 uppercase tracking-[0.2em] text-xs md:text-sm mb-6 font-semibold">
               Our Breeding Program

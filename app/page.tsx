@@ -153,7 +153,7 @@ export default function Home() {
           <div className={`grid grid-cols-1 md:grid-cols-2 gap-6 max-w-5xl mx-auto ${activeSection >= 1 ? 'animate-visible' : ''}`}>
             <Link 
               href="/breeding#cultivar-development"
-              className={`bg-white/20 backdrop-blur-sm p-8 rounded-2xl border-2 border-white/30 hover:bg-white/30 hover:scale-[1.02] transition-all cursor-pointer block mt-5 md:mt-0
+              className={`bg-white/20 backdrop-blur-sm p-8 rounded-2xl border-2 border-white/30 hover:bg-white/30 hover:scale-[1.02] transition-all cursor-pointer block mt-10 md:mt-0
                 ${activeSection >= 1 ? 'animate-slide-in' : 'opacity-0'}
               `}
               style={{ animationDelay: '0.1s' }}
@@ -219,7 +219,7 @@ export default function Home() {
             Discover our premium varieties designed for superior performance and grower success.
           </p>
           {/* Banner Grid - 2 columns on desktop, 1 on mobile */}
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-4 max-w-5xl mx-auto mb-10">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-2 md:gap-4 max-w-5xl mx-auto mb-4">
             {featuredCultivars.map((cultivar, index) => (
               <a
                 key={cultivar.id}
