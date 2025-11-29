@@ -149,58 +149,54 @@ export default function Home() {
         className="scroll-snap-section flex items-center"
         style={{ background: 'linear-gradient(to bottom right, #355e82 0%, #fdbd51 100%)' }}
       >
-        <div className="container px-4 py-20">
-          <div className={`grid grid-cols-1 md:grid-cols-2 gap-6 max-w-5xl mx-auto ${activeSection >= 1 ? 'animate-visible' : ''}`}>
+        <div className="container px-4 py-12 md:py-20" style={{ paddingTop: '50px' }}>
+          <div className={`grid grid-cols-1 md:grid-cols-2 gap-3 md:gap-6 max-w-5xl mx-auto mb-12 md:mb-0 ${activeSection >= 1 ? 'animate-visible' : ''}`}>
             <Link 
               href="/breeding#cultivar-development"
-              className={`bg-white/20 backdrop-blur-sm p-8 rounded-2xl border-2 border-white/30 hover:bg-white/30 hover:scale-[1.02] transition-all cursor-pointer block mt-10 md:mt-0
+              className={`bg-white/20 backdrop-blur-sm p-4 md:p-8 rounded-xl md:rounded-2xl border-2 border-white/30 hover:bg-white/30 hover:scale-[1.02] transition-all cursor-pointer block
                 ${activeSection >= 1 ? 'animate-slide-in' : 'opacity-0'}
               `}
               style={{ animationDelay: '0.1s' }}
             >
-              <h3 className="text-2xl md:text-3xl font-bold mb-4 text-white">Cultivar Development</h3>
-              <p className="text-white/90 leading-relaxed text-justify">
-                Premium berry varieties for short-day and day-neutral production. Superior fruit quality 
-                that drives grower profitability.
+              <h3 className="text-lg md:text-3xl font-bold mb-2 md:mb-4 text-white">Cultivar Development</h3>
+              <p className="text-white/90 leading-relaxed text-sm md:text-base">
+                Premium short-day and day-neutral varieties for superior fruit quality.
               </p>
             </Link>
             <Link 
               href="/breeding#field-testing"
-              className={`bg-white/20 backdrop-blur-sm p-8 rounded-2xl border-2 border-white/30 hover:bg-white/30 hover:scale-[1.02] transition-all cursor-pointer block
+              className={`bg-white/20 backdrop-blur-sm p-4 md:p-8 rounded-xl md:rounded-2xl border-2 border-white/30 hover:bg-white/30 hover:scale-[1.02] transition-all cursor-pointer block
                 ${activeSection >= 1 ? 'animate-slide-in' : 'opacity-0'}
               `}
               style={{ animationDelay: '0.2s' }}
             >
-              <h3 className="text-2xl md:text-3xl font-bold mb-4 text-white">Disease & Field Testing</h3>
-              <p className="text-white/90 leading-relaxed text-justify">
-                Comprehensive screening for soil-borne pathogens and disease resistance. Multi-site trials 
-                validate performance across diverse growing conditions.
+              <h3 className="text-lg md:text-3xl font-bold mb-2 md:mb-4 text-white">Disease & Field Testing</h3>
+              <p className="text-white/90 leading-relaxed text-sm md:text-base">
+                Comprehensive pathogen screening and multi-site trial validation.
               </p>
             </Link>
             <Link 
               href="/breeding#cleanstock"
-              className={`bg-white/20 backdrop-blur-sm p-8 rounded-2xl border-2 border-white/30 hover:bg-white/30 hover:scale-[1.02] transition-all cursor-pointer block
+              className={`bg-white/20 backdrop-blur-sm p-4 md:p-8 rounded-xl md:rounded-2xl border-2 border-white/30 hover:bg-white/30 hover:scale-[1.02] transition-all cursor-pointer block
                 ${activeSection >= 1 ? 'animate-slide-in' : 'opacity-0'}
               `}
               style={{ animationDelay: '0.3s' }}
             >
-              <h3 className="text-2xl md:text-3xl font-bold mb-4 text-white">Cleanstock Program</h3>
-              <p className="text-white/90 leading-relaxed text-justify">
-                Certified virus-free foundation stock ensures genetic integrity. The highest standards 
-                for nursery propagation and commercial planting material.
+              <h3 className="text-lg md:text-3xl font-bold mb-2 md:mb-4 text-white">Cleanstock Program</h3>
+              <p className="text-white/90 leading-relaxed text-sm md:text-base">
+                CDFA-certified virus-free foundation stock for nurseries.
               </p>
             </Link>
             <Link 
               href="/breeding#grower-partnerships"
-              className={`bg-white/20 backdrop-blur-sm p-8 rounded-2xl border-2 border-white/30 hover:bg-white/30 hover:scale-[1.02] transition-all cursor-pointer block
+              className={`bg-white/20 backdrop-blur-sm p-4 md:p-8 rounded-xl md:rounded-2xl border-2 border-white/30 hover:bg-white/30 hover:scale-[1.02] transition-all cursor-pointer block
                 ${activeSection >= 1 ? 'animate-slide-in' : 'opacity-0'}
               `}
               style={{ animationDelay: '0.4s' }}
             >
-              <h3 className="text-2xl md:text-3xl font-bold mb-4 text-white">Grower Partnerships</h3>
-              <p className="text-white/90 leading-relaxed text-justify">
-                Direct collaboration with commercial growers. On-farm trials and licensing programs ensure 
-                cultivars deliver real-world results.
+              <h3 className="text-lg md:text-3xl font-bold mb-2 md:mb-4 text-white">Grower Partnerships</h3>
+              <p className="text-white/90 leading-relaxed text-sm md:text-base">
+                On-farm trials and licensing for real-world results.
               </p>
             </Link>
           </div>
@@ -243,7 +239,7 @@ export default function Home() {
               </a>
             ))}
           </div>
-          <div className={`text-center ${activeSection >= 2 ? 'animate-fade-in' : 'opacity-0'}`} style={{ animationDelay: '0.6s' }}>
+          <div className={`text-center ${activeSection >= 2 ? 'animate-fade-in' : 'opacity-0'}`} style={{ animationDelay: '0.6s', marginBottom: '80px' }}>
             <a
               href="https://cultivars.cbcberry.com"
               target="_blank"

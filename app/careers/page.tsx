@@ -1,0 +1,176 @@
+'use client';
+
+import Link from 'next/link';
+import ApplicationForm from '@/components/ApplicationForm';
+
+// =============================================================================
+// CURRENT JOB OPENINGS
+// 
+// To update jobs:
+// 1. Export job description as PDF to /public/docs/jobs/[filename].pdf
+// 2. Add/edit entry below with title, location, category, and pdf path
+// 3. Remove jobs by deleting or commenting out the line
+//
+// Categories: 'research' | 'operations' | 'business' | 'international'
+// =============================================================================
+
+const currentOpenings = [
+  { title: 'Farm Manager', location: 'French Camp, CA', category: 'operations', pdf: '/docs/jobs/FarmManager.pdf' },
+  { title: 'Field Technician', location: 'Oxnard, CA', category: 'operations', pdf: '/docs/jobs/FieldTech.pdf' },
+  { title: 'Meristem Lab Technician', location: 'French Camp, CA', category: 'research', pdf: '/docs/jobs/MeristemTech.pdf' },
+  { title: 'Pathology Lab Assistant', location: 'French Camp, CA', category: 'research', pdf: '/docs/jobs/PathTech.pdf' },
+  { title: 'Trial Specialist', location: 'Multiple Locations', category: 'research', pdf: '/docs/jobs/TrialSpecialist.pdf' },
+  // Add more jobs here...
+];
+
+// =============================================================================
+// CATEGORY DEFINITIONS (styling only - don't need to edit often)
+// =============================================================================
+
+const categories: Record<string, { title: string; color: string }> = {
+  research: { title: 'Research & Development', color: '#6E903C' },
+  operations: { title: 'Farm & Field Operations', color: '#355e82' },
+  business: { title: 'Business & Administration', color: '#c93834' },
+  international: { title: 'CBC International', color: '#fdbd51' },
+};
+
+// =============================================================================
+// LOCATIONS
+// =============================================================================
+
+const locations = [
+  { name: 'French Camp, CA', description: 'Headquarters, Cleanstock, Breeding Nursery, Pathology', type: 'Headquarters' },
+  { name: 'Oxnard, CA', description: 'Short-Day Test Plots', type: 'Field Trials' },
+  { name: 'Watsonville, CA', description: 'Day-Neutral & Field Pathology Testing', type: 'Field Trials' },
+  { name: 'Huelva, Spain', description: 'CBC International', type: 'International' },
+];
+
+// Group jobs by category
+const jobsByCategory = currentOpenings.reduce((acc, job) => {
+  if (!acc[job.category]) acc[job.category] = [];
+  acc[job.category].push(job);
+  return acc;
+}, {} as Record<string, typeof currentOpenings>);
+
+export default function CareersPage() {
+  return (
+    <div className="min-h-screen bg-[#6E903C]">
+      {/* Hero */}
+      <section className="relative min-h-[30vh] flex items-center justify-center">
+        <div className="container relative z-10 py-10" style={{ paddingTop: '70px' }}>
+          <div className="max-w-4xl mx-auto text-center px-4">
+            <h1 className="text-3xl md:text-5xl lg:text-6xl font-bold mb-3 leading-tight text-white">
+              Careers at CBC
+            </h1>
+            <p className="text-base md:text-lg text-white/90 max-w-xl mx-auto">
+              Join our team in strawberry breeding and agricultural innovation.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      {/* Locations */}
+      <section className="bg-white py-8 md:py-12">
+        <div className="container px-4">
+          <div className="max-w-5xl mx-auto">
+            <h2 className="text-xl md:text-2xl font-bold mb-4 text-[#355e82] text-center">Our Locations</h2>
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-2 md:gap-3">
+              {locations.map((loc, i) => (
+                <div key={i} className="bg-gray-50 p-3 rounded-lg text-center">
+                  <p className="text-[10px] text-[#6E903C] font-bold uppercase tracking-wider mb-1">{loc.type}</p>
+                  <p className="font-bold text-[#355e82] text-sm">{loc.name}</p>
+                  <p className="text-gray-500 text-[10px] mt-1">{loc.description}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Current Openings */}
+      <section className="bg-gray-100 py-8 md:py-12">
+        <div className="container px-4">
+          <div className="max-w-3xl mx-auto">
+            <div className="flex items-center justify-between mb-4">
+              <h2 className="text-xl md:text-2xl font-bold text-[#355e82]">Current Openings</h2>
+              <span className="text-xs font-bold text-white bg-[#6E903C] px-2 py-1 rounded-full">
+                {currentOpenings.length} Position{currentOpenings.length !== 1 ? 's' : ''}
+              </span>
+            </div>
+            
+            {currentOpenings.length === 0 ? (
+              <div className="bg-white p-6 rounded-xl border-l-4 border-[#fdbd51]">
+                <p className="text-gray-600 text-sm">
+                  No positions posted right now. Submit an application below and we'll 
+                  reach out when something opens up.
+                </p>
+              </div>
+            ) : (
+              <div className="space-y-3">
+                {Object.entries(jobsByCategory).map(([catKey, jobs]) => (
+                  <div key={catKey} className="bg-white rounded-lg overflow-hidden">
+                    <div className="p-3 border-l-4" style={{ borderColor: categories[catKey]?.color }}>
+                      <h3 className="text-sm font-bold" style={{ color: categories[catKey]?.color }}>
+                        {categories[catKey]?.title}
+                      </h3>
+                    </div>
+                    <div className="divide-y divide-gray-100">
+                      {jobs.map((job, i) => (
+                        <a
+                          key={i}
+                          href={job.pdf}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="flex items-center justify-between p-3 hover:bg-gray-50 transition-colors group"
+                        >
+                          <div>
+                            <span className="font-semibold text-[#355e82] group-hover:text-[#c93834] transition-colors text-sm block">
+                              {job.title}
+                            </span>
+                            <span className="text-[10px] text-gray-400">{job.location}</span>
+                          </div>
+                          <span className="text-xs text-gray-400 group-hover:text-[#c93834]">
+                            PDF →
+                          </span>
+                        </a>
+                      ))}
+                    </div>
+                  </div>
+                ))}
+              </div>
+            )}
+          </div>
+        </div>
+      </section>
+
+      {/* Application Form */}
+      <section className="bg-[#355e82] py-8 md:py-12">
+        <div className="container px-4">
+          <div className="max-w-xl mx-auto">
+            <div className="text-center mb-4">
+              <h2 className="text-xl md:text-2xl font-bold mb-2 text-white">Apply Now</h2>
+              <p className="text-white/80 text-sm">
+                Send us your resume—we'll reach out about matching positions.
+              </p>
+            </div>
+            <div className="bg-white/10 backdrop-blur-sm p-4 md:p-5 rounded-xl border-2 border-white/20">
+              <ApplicationForm />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Bottom link */}
+      <section className="bg-[#6E903C] py-8">
+        <div className="container px-4 text-center">
+          <Link 
+            href="/breeding"
+            className="text-[#fdbd51] uppercase tracking-wider text-sm font-bold hover:text-white transition-colors"
+          >
+            Learn About Our Work →
+          </Link>
+        </div>
+      </section>
+    </div>
+  );
+}

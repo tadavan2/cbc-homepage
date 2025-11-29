@@ -3,7 +3,6 @@
 import { useState, useEffect, useRef } from 'react';
 import Link from 'next/link';
 import ContactForm from '@/components/ContactForm';
-import ApplicationForm from '@/components/ApplicationForm';
 
 /**
  * Contact Page - Multi-section scroll-snap layout
@@ -95,13 +94,6 @@ export default function ContactPage() {
               <ContactForm />
             </div>
             
-            {/* Office Location */}
-            <div className="mt-8 text-center" style={{ marginBottom: '80px' }}>
-              <p className="text-white/70 text-sm uppercase tracking-wider mb-2">Office Location</p>
-              <p className="text-white/90">
-                818 E French Camp Rd, French Camp, CA 95231
-              </p>
-            </div>
           </div>
         </div>
         
@@ -119,54 +111,20 @@ export default function ContactPage() {
         className="scroll-snap-section bg-[#6E903C] flex items-center justify-center"
       >
         <div className="container px-4 py-12 md:py-20" style={{ paddingTop: '60px' }}>
-          <div className={`max-w-4xl mx-auto ${activeSection >= 1 ? 'animate-fade-in' : 'opacity-0'}`}>
-            <div className="text-center mb-6 md:mb-10">
-              <h2 className="text-3xl md:text-5xl lg:text-6xl font-bold mb-4 leading-tight text-white">
-                Working at CBC
-              </h2>
-              <p className="text-base md:text-lg text-white/90 max-w-2xl mx-auto leading-relaxed">
-                We're always looking for talented individuals passionate about agriculture 
-                and plant science to join our team.
-              </p>
-            </div>
-
-            {/* Why Work Here - No emojis */}
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-3 mb-6">
-              <div className="bg-white/10 backdrop-blur-sm p-4 rounded-xl border border-white/20 text-center">
-                <h3 className="text-base font-bold text-white mb-1">Meaningful Work</h3>
-                <p className="text-white/80 text-xs">
-                  Develop cultivars that feed communities worldwide.
-                </p>
-              </div>
-              <div className="bg-white/10 backdrop-blur-sm p-4 rounded-xl border border-white/20 text-center">
-                <h3 className="text-base font-bold text-white mb-1">Cutting-Edge Science</h3>
-                <p className="text-white/80 text-xs">
-                  Advanced breeding techniques and pathology research.
-                </p>
-              </div>
-              <div className="bg-white/10 backdrop-blur-sm p-4 rounded-xl border border-white/20 text-center">
-                <h3 className="text-base font-bold text-white mb-1">Collaborative Culture</h3>
-                <p className="text-white/80 text-xs">
-                  Industry veterans and rising talent working together.
-                </p>
-              </div>
-            </div>
-
-            {/* Current Openings Link */}
-            <div className="text-center mb-6">
-              <a 
-                href="mailto:careers@cbcberry.com?subject=Current%20Openings%20Inquiry"
-                className="text-[#fdbd51] uppercase tracking-wider text-sm font-bold hover:text-white transition-colors inline-flex items-center gap-2"
-              >
-                Inquire About Current Openings →
-              </a>
-            </div>
-
-            {/* Application Form */}
-            <div className="bg-white/10 backdrop-blur-sm p-5 md:p-6 rounded-2xl border-2 border-white/20" style={{ marginBottom: '80px' }}>
-              <h3 className="text-lg font-bold text-white mb-4 text-center">Submit Your Application</h3>
-              <ApplicationForm />
-            </div>
+          <div className={`max-w-3xl mx-auto text-center ${activeSection >= 1 ? 'animate-fade-in' : 'opacity-0'}`}>
+            <h2 className="text-3xl md:text-5xl lg:text-6xl font-bold mb-4 leading-tight text-white">
+              Working at CBC
+            </h2>
+            <p className="text-base md:text-lg text-white/90 max-w-2xl mx-auto leading-relaxed mb-8">
+              Join our team of plant breeders, pathologists, and agricultural professionals 
+              building better berries for growers worldwide.
+            </p>
+            <Link 
+              href="/careers"
+              className="bg-[#fdbd51] text-black px-8 py-4 rounded-full font-bold uppercase tracking-wider text-sm hover:bg-[#fdbd51]/90 transition-all hover:scale-105 inline-block"
+            >
+              View Current Openings
+            </Link>
           </div>
         </div>
       </section>
