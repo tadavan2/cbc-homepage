@@ -130,7 +130,7 @@ export default function Home() {
             </div>
             
             <p className="text-lg md:text-xl text-white/90 max-w-2xl mx-auto leading-relaxed text-justify">
-              {brandMission}
+              <span style={{ fontFamily: 'Jost, sans-serif' }}><span className="font-medium">California</span> <span className="font-extrabold">Berry</span> <span className="font-medium">Cultivars</span></span> is dedicated to the continual development and improvement of strawberry cultivars—a vital part of supporting and advancing the global strawberry industry. Our team of experts leads collaborative research aimed at creating superior cultivars that meet the needs of growers worldwide, delivering fruit varieties that truly work for the world.
             </p>
           </div>
         </div>
@@ -205,11 +205,11 @@ export default function Home() {
       </section>
 
       {/* Featured Cultivars - Medium red section */}
-      <section id="cultivars" className="scroll-snap-section bg-[#c93834] flex items-start md:items-center pt-[15vh] md:pt-0">
-        <div className="container px-4 py-20" style={{ paddingTop: '45px' }}>
+      <section id="cultivars" className="scroll-snap-section bg-[#c93834] flex items-start md:items-center pt-[10vh] md:pt-0">
+        <div className="container px-4 py-20">
           <h2 className={`text-4xl md:text-5xl lg:text-6xl font-bold mb-4 text-center text-white
             ${activeSection >= 2 ? 'animate-fade-in' : 'opacity-0'}
-          `}>Featured Cultivars</h2>
+          `} style={{ fontFamily: 'Jost, sans-serif' }}>Featured Cultivars</h2>
           <p className={`text-center text-white/80 mb-8 text-lg max-w-2xl mx-auto
             ${activeSection >= 2 ? 'animate-fade-in' : 'opacity-0'}
           `} style={{ animationDelay: '0.1s' }}>
@@ -262,7 +262,7 @@ export default function Home() {
               "If you're not moving forward, you're falling behind."
             </blockquote>
             <p className="text-lg md:text-xl text-white/90 mb-8 leading-relaxed text-justify">
-              Nothing could be more true in modern agriculture. At California Berry Cultivars, we are committed to 
+              Nothing could be more true in modern agriculture. At <span style={{ fontFamily: 'Jost, sans-serif' }}><span className="font-medium">California</span> <span className="font-extrabold">Berry</span> <span className="font-medium">Cultivars</span></span>, we are committed to 
               continuous improvement and innovation in strawberry breeding.
             </p>
             <Link 
@@ -276,14 +276,19 @@ export default function Home() {
       </section>
 
       {/* About Teaser - White section with colored accent */}
-      <section className="scroll-snap-section bg-white flex items-start md:items-center pt-[20vh] md:pt-0 relative overflow-hidden">
+      <section className="scroll-snap-section bg-white flex items-start md:items-center pt-[30vh] md:pt-0 relative overflow-hidden">
         <div className="absolute top-0 left-0 w-full h-32 bg-gradient-to-b from-[#355e82] to-transparent"></div>
         <div className="container px-4 py-20 relative z-10">
           <div className={`max-w-3xl mx-auto text-center ${activeSection >= 4 ? 'animate-fade-in' : 'opacity-0'}`}>
-            <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 text-[#6E903C]">About CBC</h2>
+            <h2 className="text-3xl md:text-5xl lg:text-6xl font-bold mb-6" style={{ fontFamily: 'Jost, sans-serif' }}>
+              <span className="text-[#6E903C]">About</span><br />
+              <span className="text-[#fdbd51] font-medium">California </span>
+              <span className="text-[#BF1B2C] font-extrabold">Berry </span>
+              <span className="text-[#6E903C] font-medium">Cultivars</span>
+            </h2>
             <p className="text-lg md:text-xl text-[#6E903C] mb-6 leading-relaxed text-justify">
               Founded in 2014 as a collaborative effort between stakeholders in the strawberry industry, 
-              California Berry Cultivars is an independent breeding company focused on developing high-quality, 
+              <span style={{ fontFamily: 'Jost, sans-serif' }}> <span className="font-medium">California</span> <span className="font-extrabold">Berry</span> <span className="font-medium">Cultivars</span></span> is an independent breeding company focused on developing high-quality, 
               high-yield cultivars for commercial growers worldwide.
             </p>
             <Link 
@@ -297,10 +302,10 @@ export default function Home() {
       </section>
 
       {/* Contact - Light blue section */}
-      <section className="scroll-snap-section bg-[#c4daf4] flex items-start md:items-center pt-[20vh] md:pt-0">
+      <section className="scroll-snap-section bg-[#c4daf4] flex items-start md:items-center pt-[40vh] md:pt-0">
         <div className="container px-4 py-20">
           <div className={`max-w-2xl mx-auto text-center ${activeSection >= 5 ? 'animate-fade-in' : 'opacity-0'}`}>
-            <h2 className="text-3xl md:text-4xl font-bold mb-6 text-[#355e82]">Get in Touch</h2>
+            <h2 className="text-3xl md:text-4xl font-bold mb-6 text-[#355e82]" style={{ fontFamily: 'Jost, sans-serif' }}>Get in Touch</h2>
             <p className="text-[#355e82]/80 mb-8">
               Questions about our cultivars? Ready to explore partnership opportunities?
             </p>

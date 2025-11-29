@@ -43,10 +43,10 @@ export default function NavBar() {
         <div className="container">
           <div className="flex items-center justify-between h-10 md:h-12">
             {/* Full Company Name Logo - Single Line */}
-            <Link href="/" className="flex items-center gap-2 hover:opacity-90 transition-opacity" style={{ fontFamily: 'Futura, "Futura PT", "Century Gothic", "AppleGothic", sans-serif' }}>
-              <span className="text-[#fdbd51] text-base md:text-lg font-bold tracking-tight">CALIFORNIA</span>
-              <span className="text-[#BF1B2C] text-base md:text-lg font-bold tracking-tight">BERRY</span>
-              <span className="text-[#6E903C] text-base md:text-lg font-bold tracking-tight">CULTIVARS</span>
+            <Link href="/" className="flex items-center gap-1 hover:opacity-90 transition-opacity" style={{ fontFamily: 'Jost, sans-serif' }}>
+              <span className="text-[#fdbd51] text-base md:text-lg font-medium tracking-tight">CALIFORNIA</span>
+              <span className="text-[#BF1B2C] text-base md:text-lg font-extrabold tracking-tight">BERRY</span>
+              <span className="text-[#6E903C] text-base md:text-lg font-medium tracking-tight">CULTIVARS</span>
             </Link>
 
             {/* Desktop Navigation - Company name is the Home link */}
@@ -135,6 +135,27 @@ export default function NavBar() {
                 >
                   Contact
                 </Link>
+                <Link 
+                  href="/" 
+                  onClick={() => setIsOpen(false)}
+                  className="text-lg uppercase tracking-[0.15em] text-black hover:text-[#BF1B2C] transition-colors font-semibold"
+                >
+                  Home
+                </Link>
+                
+                {/* Divider */}
+                <div className="border-t border-gray-400/50 my-2"></div>
+                
+                {/* Social */}
+                <a
+                  href="https://www.linkedin.com/company/california-berry-cultivars"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  onClick={() => setIsOpen(false)}
+                  className="text-sm uppercase tracking-[0.15em] text-black/70 hover:text-[#BF1B2C] transition-colors font-semibold"
+                >
+                  Follow Us on LinkedIn
+                </a>
               </nav>
             </div>
           </div>

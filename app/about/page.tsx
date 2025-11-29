@@ -28,7 +28,29 @@ const sectionMap: Record<string, number> = {
 export default function AboutPage() {
   const [activeSection, setActiveSection] = useState(0);
   const containerRef = useRef<HTMLDivElement>(null);
+  const videoRef = useRef<HTMLVideoElement>(null);
   const [isReady, setIsReady] = useState(false);
+  const [videoEnded, setVideoEnded] = useState(false);
+  const [videoPlayed, setVideoPlayed] = useState(false);
+
+  // Auto-play video once when section comes into view
+  useEffect(() => {
+    if (activeSection === 0 && !videoPlayed && videoRef.current) {
+      videoRef.current.play().catch(() => {
+        // Autoplay may be blocked, that's okay
+      });
+      setVideoPlayed(true);
+    }
+  }, [activeSection, videoPlayed]);
+
+  // Replay handler
+  const handleReplay = () => {
+    if (videoRef.current) {
+      videoRef.current.currentTime = 0;
+      videoRef.current.play();
+      setVideoEnded(false);
+    }
+  };
 
   // Handle hash navigation on mount
   useEffect(() => {
@@ -87,24 +109,46 @@ export default function AboutPage() {
             <p className="text-[#fdbd51] uppercase tracking-[0.2em] text-xs md:text-sm mb-6 font-semibold">
               Who We Are
             </p>
-            <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold mb-8 leading-tight text-white">
+            <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold mb-8 leading-tight text-white" style={{ fontFamily: 'Jost, sans-serif' }}>
               About<br />
-              <span className="text-[#fdbd51]">California Berry Cultivars</span>
+              <span className="text-[#fdbd51] font-medium">California </span>
+              <span className="text-[#BF1B2C] font-extrabold">Berry </span>
+              <span className="text-[#6E903C] font-medium">Cultivars</span>
             </h1>
             <p className="text-lg md:text-xl text-white/90 max-w-2xl mx-auto leading-relaxed text-justify mb-8">
               Independent strawberry breeding, driven by collaboration and innovation. 
               Building better berries for growers worldwide since 2014.
             </p>
             
-            {/* Video Placeholder */}
-            <div className="max-w-3xl mx-auto bg-black/30 rounded-2xl aspect-video flex items-center justify-center border-2 border-white/20">
-              <div className="text-center">
-                <svg className="w-16 h-16 text-white/50 mx-auto mb-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M14.752 11.168l-3.197-2.132A1 1 0 0010 9.87v4.263a1 1 0 001.555.832l3.197-2.132a1 1 0 000-1.664z" />
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
-                </svg>
-                <p className="text-white/50 text-sm uppercase tracking-wider">Video Coming Soon</p>
-              </div>
+            {/* Video Player */}
+            <div className="max-w-3xl mx-auto rounded-2xl overflow-hidden border-2 border-white/20 relative">
+              <video
+                ref={videoRef}
+                className="w-full aspect-video object-cover"
+                playsInline
+                muted
+                onEnded={() => setVideoEnded(true)}
+                onPlay={() => setVideoEnded(false)}
+              >
+                <source src="/videos/test_video.mov" type="video/quicktime" />
+                <source src="/videos/test_video.mp4" type="video/mp4" />
+                Your browser does not support the video tag.
+              </video>
+              
+              {/* Replay Overlay */}
+              {videoEnded && (
+                <div 
+                  className="absolute inset-0 bg-black/60 flex items-center justify-center cursor-pointer hover:bg-black/50 transition-colors"
+                  onClick={handleReplay}
+                >
+                  <div className="text-center">
+                    <svg className="w-16 h-16 text-white mx-auto mb-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15" />
+                    </svg>
+                    <p className="text-white text-sm uppercase tracking-wider font-semibold">Replay Video</p>
+                  </div>
+                </div>
+              )}
             </div>
           </div>
         </div>
@@ -127,11 +171,11 @@ export default function AboutPage() {
             <p className="text-[#fdbd51] uppercase tracking-[0.2em] text-xs md:text-sm mb-6 font-semibold">
               How It Started
             </p>
-            <h2 className="text-4xl md:text-6xl lg:text-7xl font-bold mb-8 leading-tight text-white">
+            <h2 className="text-4xl md:text-6xl lg:text-7xl font-bold mb-8 leading-tight text-white" style={{ fontFamily: 'Jost, sans-serif' }}>
               Our Story
             </h2>
             <p className="text-lg md:text-xl text-white/90 max-w-2xl mx-auto leading-relaxed text-justify mb-6">
-              California Berry Cultivars, LLC was founded in 2014 as a collaborative effort 
+              <span style={{ fontFamily: 'Jost, sans-serif' }}><span className="font-medium">California</span> <span className="font-extrabold">Berry</span> <span className="font-medium">Cultivars</span></span>, LLC was founded in 2014 as a collaborative effort 
               between stakeholders in the strawberry industry who shared a vision: to develop 
               superior strawberry cultivars through independent, focused research.
             </p>
@@ -154,11 +198,11 @@ export default function AboutPage() {
             <p className="text-[#fdbd51] uppercase tracking-[0.2em] text-xs md:text-sm mb-6 font-semibold">
               The People Behind CBC
             </p>
-            <h2 className="text-4xl md:text-6xl lg:text-7xl font-bold mb-8 leading-tight text-white">
+            <h2 className="text-4xl md:text-6xl lg:text-7xl font-bold mb-8 leading-tight text-white" style={{ fontFamily: 'Jost, sans-serif' }}>
               Our Team
             </h2>
             <p className="text-lg md:text-xl text-white/90 max-w-2xl mx-auto leading-relaxed text-justify mb-6">
-              The California Berry Cultivars team consists of a mix of veterans and the next 
+              The <span style={{ fontFamily: 'Jost, sans-serif' }}><span className="font-medium">California</span> <span className="font-extrabold">Berry</span> <span className="font-medium">Cultivars</span></span> team consists of a mix of veterans and the next 
               generation of strawberry cultivar developers and researchers. Together, they bring 
               over 100 years of collective experience in the strawberry industry.
             </p>
@@ -175,21 +219,21 @@ export default function AboutPage() {
       <section 
         id="mission" 
         className="scroll-snap-section flex items-start md:items-center justify-center pt-[15vh] md:pt-0"
-        style={{ background: 'linear-gradient(to bottom right, #355e82 0%, #fdbd51 100%)' }}
+        style={{ background: 'linear-gradient(to bottom right, #c93834 0%, #fdbd51 100%)' }}
       >
         <div className="container px-4 py-20">
           <div className={`max-w-4xl mx-auto text-center ${activeSection >= 3 ? 'animate-fade-in' : 'opacity-0'}`}>
             <p className="text-white/80 uppercase tracking-[0.2em] text-xs md:text-sm mb-6 font-semibold">
               What Drives Us
             </p>
-            <h2 className="text-4xl md:text-6xl lg:text-7xl font-bold mb-8 leading-tight text-white">
+            <h2 className="text-4xl md:text-6xl lg:text-7xl font-bold mb-8 leading-tight text-white" style={{ fontFamily: 'Jost, sans-serif' }}>
               Our Mission
             </h2>
             <blockquote className="text-2xl md:text-3xl font-bold italic mb-8 text-white leading-tight">
               "If you're not moving forward, you're falling behind."
             </blockquote>
             <p className="text-lg md:text-xl text-white/90 max-w-2xl mx-auto leading-relaxed text-justify">
-              California Berry Cultivars is dedicated to the continual development and improvement 
+              <span style={{ fontFamily: 'Jost, sans-serif' }}><span className="font-medium">California</span> <span className="font-extrabold">Berry</span> <span className="font-medium">Cultivars</span></span> is dedicated to the continual development and improvement 
               of strawberry cultivars—a vital part of supporting and advancing the global strawberry 
               industry. Our team leads collaborative research aimed at creating superior cultivars 
               that meet the needs of growers worldwide.
@@ -205,7 +249,7 @@ export default function AboutPage() {
       >
         <div className="container px-4 py-10 md:py-16" style={{ paddingTop: '50px' }}>
           <div className={`max-w-5xl mx-auto ${activeSection >= 4 ? 'animate-fade-in' : 'opacity-0'}`}>
-            <h2 className="text-2xl md:text-4xl lg:text-5xl font-bold mb-3 leading-tight text-[#355e82] text-center">
+            <h2 className="text-2xl md:text-4xl lg:text-5xl font-bold mb-3 leading-tight text-[#355e82] text-center" style={{ fontFamily: 'Jost, sans-serif' }}>
               Our Partners
             </h2>
             <p className="text-sm md:text-base text-[#355e82]/90 max-w-xl mx-auto leading-relaxed text-center mb-4">
@@ -290,7 +334,7 @@ export default function AboutPage() {
             <p className="text-[#355e82] uppercase tracking-[0.2em] text-xs md:text-sm mb-6 font-semibold">
               See What We've Built
             </p>
-            <h2 className="text-4xl md:text-6xl lg:text-7xl font-bold mb-8 leading-tight text-[#355e82]">
+            <h2 className="text-4xl md:text-6xl lg:text-7xl font-bold mb-8 leading-tight text-[#355e82]" style={{ fontFamily: 'Jost, sans-serif' }}>
               Explore<br />Our Work
             </h2>
             <p className="text-lg md:text-xl text-[#355e82]/80 mb-10 leading-relaxed">

@@ -17,10 +17,10 @@ export default function Footer() {
           {/* Company info and navigation */}
           <div className="md:col-span-8 grid grid-cols-1 md:grid-cols-2 gap-8">
             <div>
-              <Link href="/" className="text-xl font-bold mb-4 inline-block" style={{ fontFamily: 'Futura, "Futura PT", "Century Gothic", "AppleGothic", sans-serif' }}>
-                <span className="text-[#fdbd51]">CALIFORNIA</span>{' '}
-                <span className="text-[#c93834]">BERRY</span>{' '}
-                <span className="text-[#6E903C]">CULTIVARS</span>
+              <Link href="/" className="text-xl mb-4 inline-block" style={{ fontFamily: 'Jost, sans-serif' }}>
+                <span className="text-[#fdbd51] font-medium">CALIFORNIA</span>{' '}
+                <span className="text-[#c93834] font-extrabold">BERRY</span>{' '}
+                <span className="text-[#6E903C] font-medium">CULTIVARS</span>
               </Link>
               <p className="text-black text-sm leading-relaxed mt-3">
                 818 E French Camp Rd<br />

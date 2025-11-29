@@ -12,7 +12,7 @@ export default function CultivarSublicensePage() {
             <p className="text-[#fdbd51] uppercase tracking-[0.2em] text-xs md:text-sm mb-6 font-semibold">
               Grower Licensing
             </p>
-            <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold mb-6 leading-tight text-white">
+            <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold mb-6 leading-tight text-white" style={{ fontFamily: 'Jost, sans-serif' }}>
               Cultivar<br />
               <span className="text-[#fdbd51]">Sublicense</span>
             </h1>
@@ -29,7 +29,7 @@ export default function CultivarSublicensePage() {
           <div className="max-w-4xl mx-auto">
             <div className="bg-[#355e82]/10 p-6 md:p-8 rounded-2xl border-l-4 border-[#355e82] mb-8">
               <p className="text-[#355e82] leading-relaxed text-justify">
-                California commercial nurseries ("Nursery") are licensed by California Berry Cultivars, LLC ("CBC") 
+                California commercial nurseries ("Nursery") are licensed by <span style={{ fontFamily: 'Jost, sans-serif' }}><span className="font-medium">California</span> <span className="font-extrabold">Berry</span> <span className="font-medium">Cultivars</span></span>, LLC ("CBC") 
                 to propagate, sell, and distribute Clones of Cultivars and related Intellectual Property ("IP") to 
                 commercial strawberry growers, only for commercial fruit production. Sales by the Nursery are subject 
                 to that License, which includes the right to sublicense commercial growers to use the IP for commercial 
@@ -37,7 +37,7 @@ export default function CultivarSublicensePage() {
               </p>
             </div>
 
-            <h2 className="text-2xl md:text-3xl font-bold mb-6 text-[#355e82]">Sublicense Terms</h2>
+            <h2 className="text-2xl md:text-3xl font-bold mb-6 text-[#355e82]" style={{ fontFamily: 'Jost, sans-serif' }}>Sublicense Terms</h2>
             
             <div className="space-y-6">
               <div className="bg-[#fdbd51]/10 p-5 md:p-6 rounded-xl border-l-4 border-[#6E903C]">
@@ -90,7 +90,7 @@ export default function CultivarSublicensePage() {
       <section className="bg-[#355e82] py-12 md:py-16">
         <div className="container px-4">
           <div className="max-w-3xl mx-auto text-center">
-            <h2 className="text-2xl md:text-3xl font-bold mb-4 text-white">
+            <h2 className="text-2xl md:text-3xl font-bold mb-4 text-white" style={{ fontFamily: 'Jost, sans-serif' }}>
               Full Agreement
             </h2>
             <p className="text-base text-white/90 mb-6 leading-relaxed">

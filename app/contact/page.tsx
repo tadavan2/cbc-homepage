@@ -81,7 +81,7 @@ export default function ContactPage() {
               <p className="text-[#fdbd51] uppercase tracking-[0.2em] text-xs md:text-sm mb-6 font-semibold">
                 Get In Touch
               </p>
-              <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold mb-6 leading-tight text-white">
+              <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold mb-6 leading-tight text-white" style={{ fontFamily: 'Jost, sans-serif' }}>
                 Contact Us
               </h1>
               <p className="text-lg md:text-xl text-white/90 max-w-xl mx-auto leading-relaxed">
@@ -111,8 +111,11 @@ export default function ContactPage() {
       >
         <div className="container px-4 py-12 md:py-20" style={{ paddingTop: '60px' }}>
           <div className={`max-w-3xl mx-auto text-center ${activeSection >= 1 ? 'animate-fade-in' : 'opacity-0'}`}>
-            <h2 className="text-3xl md:text-5xl lg:text-6xl font-bold mb-4 leading-tight text-white">
-              Working at CBC
+            <h2 className="text-3xl md:text-5xl lg:text-6xl font-bold mb-4 leading-tight text-white" style={{ fontFamily: 'Jost, sans-serif' }}>
+              Work at<br />
+              <span className="text-[#fdbd51] font-medium">California </span>
+              <span className="text-[#BF1B2C] font-extrabold">Berry </span>
+              <span className="text-white font-medium">Cultivars</span>
             </h2>
             <p className="text-base md:text-lg text-white/90 max-w-2xl mx-auto leading-relaxed mb-8">
               Join our team of plant breeders, pathologists, and agricultural professionals 

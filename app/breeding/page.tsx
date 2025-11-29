@@ -87,7 +87,7 @@ export default function BreedingPage() {
             <p className="text-white/80 uppercase tracking-[0.2em] text-xs md:text-sm mb-6 font-semibold">
               Our Breeding Program
             </p>
-            <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold mb-8 leading-tight text-white">
+            <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold mb-8 leading-tight text-white" style={{ fontFamily: 'Jost, sans-serif' }}>
               Cultivar<br />Development
             </h1>
             <p className="text-lg md:text-xl text-white/90 max-w-2xl mx-auto leading-relaxed text-justify mb-8">
@@ -126,7 +126,7 @@ export default function BreedingPage() {
             <p className="text-[#fdbd51] uppercase tracking-[0.2em] text-xs md:text-sm mb-6 font-semibold">
               Multi-Site Validation
             </p>
-            <h2 className="text-4xl md:text-6xl lg:text-7xl font-bold mb-8 leading-tight text-white">
+            <h2 className="text-4xl md:text-6xl lg:text-7xl font-bold mb-8 leading-tight text-white" style={{ fontFamily: 'Jost, sans-serif' }}>
               Field<br />Testing
             </h2>
             <p className="text-lg md:text-xl text-white/90 max-w-2xl mx-auto leading-relaxed text-justify">
@@ -148,7 +148,7 @@ export default function BreedingPage() {
             <p className="text-[#fdbd51] uppercase tracking-[0.2em] text-xs md:text-sm mb-6 font-semibold">
               Disease Resistance
             </p>
-            <h2 className="text-4xl md:text-6xl lg:text-7xl font-bold mb-8 leading-tight text-white">
+            <h2 className="text-4xl md:text-6xl lg:text-7xl font-bold mb-8 leading-tight text-white" style={{ fontFamily: 'Jost, sans-serif' }}>
               Pathology &<br />Screening
             </h2>
             <p className="text-lg md:text-xl text-white/90 max-w-2xl mx-auto leading-relaxed text-justify">
@@ -171,7 +171,7 @@ export default function BreedingPage() {
             <p className="text-white/80 uppercase tracking-[0.2em] text-xs md:text-sm mb-6 font-semibold">
               Foundation Stock
             </p>
-            <h2 className="text-4xl md:text-6xl lg:text-7xl font-bold mb-8 leading-tight text-white">
+            <h2 className="text-4xl md:text-6xl lg:text-7xl font-bold mb-8 leading-tight text-white" style={{ fontFamily: 'Jost, sans-serif' }}>
               Cleanstock<br />Program
             </h2>
             <p className="text-lg md:text-xl text-white/90 max-w-2xl mx-auto leading-relaxed text-justify">
@@ -195,7 +195,7 @@ export default function BreedingPage() {
             <p className="text-[#fdbd51] uppercase tracking-[0.2em] text-xs md:text-sm mb-6 font-semibold">
               Collaborative Success
             </p>
-            <h2 className="text-4xl md:text-6xl lg:text-7xl font-bold mb-8 leading-tight text-white">
+            <h2 className="text-4xl md:text-6xl lg:text-7xl font-bold mb-8 leading-tight text-white" style={{ fontFamily: 'Jost, sans-serif' }}>
               Grower<br />Partnerships
             </h2>
             <p className="text-lg md:text-xl text-white/90 max-w-2xl mx-auto leading-relaxed text-justify mb-8">

@@ -59,8 +59,11 @@ export default function CareersPage() {
       <section className="relative min-h-[30vh] flex items-center justify-center">
         <div className="container relative z-10 py-10" style={{ paddingTop: '70px' }}>
           <div className="max-w-4xl mx-auto text-center px-4">
-            <h1 className="text-3xl md:text-5xl lg:text-6xl font-bold mb-3 leading-tight text-white">
-              Careers at CBC
+            <h1 className="text-3xl md:text-5xl lg:text-6xl font-bold mb-3 leading-tight text-white" style={{ fontFamily: 'Jost, sans-serif' }}>
+              Careers at<br />
+              <span className="text-[#fdbd51] font-medium">California </span>
+              <span className="text-[#BF1B2C] font-extrabold">Berry </span>
+              <span className="text-white font-medium">Cultivars</span>
             </h1>
             <p className="text-base md:text-lg text-white/90 max-w-xl mx-auto">
               Join our team in strawberry breeding and agricultural innovation.
@@ -73,7 +76,7 @@ export default function CareersPage() {
       <section className="bg-white py-8 md:py-12">
         <div className="container px-4">
           <div className="max-w-5xl mx-auto">
-            <h2 className="text-xl md:text-2xl font-bold mb-4 text-[#355e82] text-center">Our Locations</h2>
+            <h2 className="text-xl md:text-2xl font-bold mb-4 text-[#355e82] text-center" style={{ fontFamily: 'Jost, sans-serif' }}>Our Locations</h2>
             <div className="grid grid-cols-2 md:grid-cols-4 gap-2 md:gap-3">
               {locations.map((loc, i) => (
                 <div key={i} className="bg-gray-50 p-3 rounded-lg text-center">
@@ -92,7 +95,7 @@ export default function CareersPage() {
         <div className="container px-4">
           <div className="max-w-3xl mx-auto">
             <div className="flex items-center justify-between mb-4">
-              <h2 className="text-xl md:text-2xl font-bold text-[#355e82]">Current Openings</h2>
+              <h2 className="text-xl md:text-2xl font-bold text-[#355e82]" style={{ fontFamily: 'Jost, sans-serif' }}>Current Openings</h2>
               <span className="text-xs font-bold text-white bg-[#6E903C] px-2 py-1 rounded-full">
                 {currentOpenings.length} Position{currentOpenings.length !== 1 ? 's' : ''}
               </span>
@@ -148,7 +151,7 @@ export default function CareersPage() {
         <div className="container px-4">
           <div className="max-w-xl mx-auto">
             <div className="text-center mb-4">
-              <h2 className="text-xl md:text-2xl font-bold mb-2 text-white">Apply Now</h2>
+              <h2 className="text-xl md:text-2xl font-bold mb-2 text-white" style={{ fontFamily: 'Jost, sans-serif' }}>Apply Now</h2>
               <p className="text-white/80 text-sm">
                 Send us your resume—we'll reach out about matching positions.
               </p>
