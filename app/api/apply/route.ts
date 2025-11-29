@@ -54,7 +54,7 @@ export async function POST(request: NextRequest) {
     // Send email using Resend
     const resend = getResend();
     await resend.emails.send({
-      from: 'CBC Careers <careers@cbcberry.com>',
+      from: 'CBC Careers <explorer@cbcberry.com>',
       to: ['kyle@cbcberry.com'],
       subject: `Job Application: ${name} - ${position}`,
       attachments: attachments,
@@ -115,7 +115,7 @@ export async function POST(request: NextRequest) {
 
     // Send confirmation email to applicant
     await resend.emails.send({
-      from: 'California Berry Cultivars <careers@cbcberry.com>',
+      from: 'California Berry Cultivars <explorer@cbcberry.com>',
       to: [email],
       subject: 'Application Received - California Berry Cultivars',
       html: `

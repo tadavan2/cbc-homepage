@@ -85,7 +85,7 @@ export async function POST(request: NextRequest) {
     // Send email using Resend
     const resend = getResend();
     await resend.emails.send({
-      from: 'CBC Homepage <homepage@cbcberry.com>',
+      from: 'CBC Homepage <explorer@cbcberry.com>',
       to: ['kyle@cbcberry.com'],
       subject: `New Contact: ${name}${company ? ` from ${company}` : ''}`,
       html: `
