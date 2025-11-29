@@ -147,7 +147,7 @@ export default function Home() {
       {/* What We Do - Yellow section */}
       <section className="scroll-snap-section bg-[#fdbd51] flex items-center">
         <div className="container px-4 py-20">
-          <div className={`grid grid-cols-1 md:grid-cols-3 gap-8 ${activeSection >= 1 ? 'animate-visible' : ''}`}>
+          <div className={`grid grid-cols-1 md:grid-cols-2 gap-6 max-w-5xl mx-auto ${activeSection >= 1 ? 'animate-visible' : ''}`}>
             <Link 
               href="/breeding#cultivar-development"
               className={`bg-white/20 backdrop-blur-sm p-8 rounded-2xl border-2 border-white/30 hover:bg-white/30 hover:scale-[1.02] transition-all cursor-pointer block mt-5 md:mt-0
@@ -170,8 +170,21 @@ export default function Home() {
             >
               <h3 className="text-2xl md:text-3xl font-bold mb-4 text-[#6E903C]">Disease & Field Testing</h3>
               <p className="text-[#6E903C]/90 leading-relaxed text-justify">
-                Rigorous screening for Fusarium, Macrophomina, and critical pathogens. Multi-site trials 
+                Comprehensive screening for soil-borne pathogens and disease resistance. Multi-site trials 
                 validate performance across diverse growing conditions.
+              </p>
+            </Link>
+            <Link 
+              href="/breeding#cleanstock"
+              className={`bg-white/20 backdrop-blur-sm p-8 rounded-2xl border-2 border-white/30 hover:bg-white/30 hover:scale-[1.02] transition-all cursor-pointer block
+                ${activeSection >= 1 ? 'animate-slide-in' : 'opacity-0'}
+              `}
+              style={{ animationDelay: '0.3s' }}
+            >
+              <h3 className="text-2xl md:text-3xl font-bold mb-4 text-[#6E903C]">Cleanstock Program</h3>
+              <p className="text-[#6E903C]/90 leading-relaxed text-justify">
+                Certified virus-free foundation stock ensures genetic integrity. The highest standards 
+                for nursery propagation and commercial planting material.
               </p>
             </Link>
             <Link 
@@ -179,7 +192,7 @@ export default function Home() {
               className={`bg-white/20 backdrop-blur-sm p-8 rounded-2xl border-2 border-white/30 hover:bg-white/30 hover:scale-[1.02] transition-all cursor-pointer block
                 ${activeSection >= 1 ? 'animate-slide-in' : 'opacity-0'}
               `}
-              style={{ animationDelay: '0.3s' }}
+              style={{ animationDelay: '0.4s' }}
             >
               <h3 className="text-2xl md:text-3xl font-bold mb-4 text-[#6E903C]">Grower Partnerships</h3>
               <p className="text-[#6E903C]/90 leading-relaxed text-justify">

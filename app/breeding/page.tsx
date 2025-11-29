@@ -163,17 +163,18 @@ export default function BreedingPage() {
       {/* Section 4: Cleanstock */}
       <section 
         id="cleanstock" 
-        className="scroll-snap-section bg-[#fdbd51] flex items-center justify-center"
+        className="scroll-snap-section flex items-center justify-center"
+        style={{ background: 'linear-gradient(to bottom right, #355e82 0%, #fdbd51 100%)' }}
       >
         <div className="container px-4 py-20">
           <div className={`max-w-4xl mx-auto text-center ${activeSection >= 3 ? 'animate-fade-in' : 'opacity-0'}`}>
-            <p className="text-[#6E903C] uppercase tracking-[0.2em] text-xs md:text-sm mb-6 font-semibold">
+            <p className="text-white/80 uppercase tracking-[0.2em] text-xs md:text-sm mb-6 font-semibold">
               Foundation Stock
             </p>
-            <h2 className="text-4xl md:text-6xl lg:text-7xl font-bold mb-8 leading-tight text-[#355e82]">
+            <h2 className="text-4xl md:text-6xl lg:text-7xl font-bold mb-8 leading-tight text-white">
               Cleanstock<br />Program
             </h2>
-            <p className="text-lg md:text-xl text-[#355e82]/90 max-w-2xl mx-auto leading-relaxed text-justify">
+            <p className="text-lg md:text-xl text-white/90 max-w-2xl mx-auto leading-relaxed text-justify">
               Certified virus-free foundation stock ensures the genetic integrity and health of 
               every plant. Our cleanstock program maintains the highest standards for nursery 
               propagation and commercial planting material.
