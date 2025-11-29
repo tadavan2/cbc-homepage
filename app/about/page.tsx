@@ -80,7 +80,7 @@ export default function AboutPage() {
       {/* Section 1: Hero with Video Placeholder */}
       <section 
         id="hero" 
-        className="scroll-snap-section bg-[#355e82] flex items-center justify-center"
+        className="scroll-snap-section bg-[#355e82] flex items-start md:items-center justify-center pt-[15vh] md:pt-0"
       >
         <div className="container px-4 py-12 md:py-20" style={{ paddingTop: '60px' }}>
           <div className={`max-w-4xl mx-auto text-center ${activeSection >= 0 ? 'animate-fade-in' : 'opacity-0'}`}>
@@ -120,7 +120,7 @@ export default function AboutPage() {
       {/* Section 2: Our Story */}
       <section 
         id="story" 
-        className="scroll-snap-section bg-[#6E903C] flex items-center justify-center"
+        className="scroll-snap-section bg-[#6E903C] flex items-start md:items-center justify-center pt-[15vh] md:pt-0"
       >
         <div className="container px-4 py-20">
           <div className={`max-w-4xl mx-auto text-center ${activeSection >= 1 ? 'animate-fade-in' : 'opacity-0'}`}>
@@ -147,7 +147,7 @@ export default function AboutPage() {
       {/* Section 3: Our Team */}
       <section 
         id="team" 
-        className="scroll-snap-section bg-[#c93834] flex items-center justify-center"
+        className="scroll-snap-section bg-[#c93834] flex items-start md:items-center justify-center pt-[15vh] md:pt-0"
       >
         <div className="container px-4 py-20">
           <div className={`max-w-4xl mx-auto text-center ${activeSection >= 2 ? 'animate-fade-in' : 'opacity-0'}`}>
@@ -174,7 +174,7 @@ export default function AboutPage() {
       {/* Section 4: Our Mission */}
       <section 
         id="mission" 
-        className="scroll-snap-section flex items-center justify-center"
+        className="scroll-snap-section flex items-start md:items-center justify-center pt-[15vh] md:pt-0"
         style={{ background: 'linear-gradient(to bottom right, #355e82 0%, #fdbd51 100%)' }}
       >
         <div className="container px-4 py-20">
@@ -201,7 +201,7 @@ export default function AboutPage() {
       {/* Section 5: Our Partners */}
       <section 
         id="partners" 
-        className="scroll-snap-section bg-[#fdbd51] flex items-center justify-center"
+        className="scroll-snap-section bg-[#fdbd51] flex items-start md:items-center justify-center pt-[15vh] md:pt-0"
       >
         <div className="container px-4 py-10 md:py-16" style={{ paddingTop: '50px' }}>
           <div className={`max-w-5xl mx-auto ${activeSection >= 4 ? 'animate-fade-in' : 'opacity-0'}`}>
@@ -283,7 +283,7 @@ export default function AboutPage() {
       {/* Section 6: Explore Our Work */}
       <section 
         id="explore" 
-        className="scroll-snap-section bg-[#c4daf4] flex items-center justify-center"
+        className="scroll-snap-section bg-[#c4daf4] flex items-start md:items-center justify-center pt-[15vh] md:pt-0"
       >
         <div className="container px-4 py-20">
           <div className={`max-w-3xl mx-auto text-center ${activeSection >= 5 ? 'animate-fade-in' : 'opacity-0'}`}>

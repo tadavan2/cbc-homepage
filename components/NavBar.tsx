@@ -2,27 +2,35 @@
 
 import Link from 'next/link';
 import { useState, useEffect } from 'react';
+import { usePathname } from 'next/navigation';
 
 export default function NavBar() {
   const [isOpen, setIsOpen] = useState(false);
   const [isVisible, setIsVisible] = useState(false);
+  const pathname = usePathname();
 
   useEffect(() => {
+    // On non-homepage routes, show navbar immediately
+    if (pathname !== '/') {
+      setIsVisible(true);
+      return;
+    }
+
+    // On homepage, show navbar after scroll
     const handleScroll = () => {
-      // Show navbar after any scroll (even 1px)
       if (window.scrollY > 0) {
         setIsVisible(true);
       }
     };
 
-    // Check initial scroll position (in case page loads scrolled)
+    // Check initial scroll position
     if (window.scrollY > 0) {
       setIsVisible(true);
     }
 
     window.addEventListener('scroll', handleScroll, { passive: true });
     return () => window.removeEventListener('scroll', handleScroll);
-  }, []);
+  }, [pathname]);
 
   return (
     <>

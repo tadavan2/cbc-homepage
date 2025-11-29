@@ -80,7 +80,7 @@ export default function BreedingPage() {
       {/* Section 1: Cultivar Development (Hero) */}
       <section 
         id="cultivar-development" 
-        className="scroll-snap-section bg-[#6E903C] flex items-center justify-center"
+        className="scroll-snap-section bg-[#6E903C] flex items-start md:items-center justify-center pt-[15vh] md:pt-0"
       >
         <div className="container px-4 py-12 md:py-20" style={{ paddingTop: '60px' }}>
           <div className={`max-w-4xl mx-auto text-center ${activeSection >= 0 ? 'animate-fade-in' : 'opacity-0'}`}>
@@ -119,7 +119,7 @@ export default function BreedingPage() {
       {/* Section 2: Field Testing */}
       <section 
         id="field-testing" 
-        className="scroll-snap-section bg-[#355e82] flex items-center justify-center"
+        className="scroll-snap-section bg-[#355e82] flex items-start md:items-center justify-center pt-[15vh] md:pt-0"
       >
         <div className="container px-4 py-20">
           <div className={`max-w-4xl mx-auto text-center ${activeSection >= 1 ? 'animate-fade-in' : 'opacity-0'}`}>
@@ -141,7 +141,7 @@ export default function BreedingPage() {
       {/* Section 3: Pathology */}
       <section 
         id="pathology" 
-        className="scroll-snap-section bg-[#c93834] flex items-center justify-center"
+        className="scroll-snap-section bg-[#c93834] flex items-start md:items-center justify-center pt-[15vh] md:pt-0"
       >
         <div className="container px-4 py-20">
           <div className={`max-w-4xl mx-auto text-center ${activeSection >= 2 ? 'animate-fade-in' : 'opacity-0'}`}>
@@ -163,7 +163,7 @@ export default function BreedingPage() {
       {/* Section 4: Cleanstock */}
       <section 
         id="cleanstock" 
-        className="scroll-snap-section flex items-center justify-center"
+        className="scroll-snap-section flex items-start md:items-center justify-center pt-[15vh] md:pt-0"
         style={{ background: 'linear-gradient(to bottom right, #355e82 0%, #fdbd51 100%)' }}
       >
         <div className="container px-4 py-20">
@@ -188,7 +188,7 @@ export default function BreedingPage() {
       {/* Section 5: Grower Partnerships */}
       <section 
         id="grower-partnerships" 
-        className="scroll-snap-section bg-[#920000] flex items-center justify-center"
+        className="scroll-snap-section bg-[#920000] flex items-start md:items-center justify-center pt-[15vh] md:pt-0"
       >
         <div className="container px-4 py-20">
           <div className={`max-w-4xl mx-auto text-center ${activeSection >= 4 ? 'animate-fade-in' : 'opacity-0'}`}>
