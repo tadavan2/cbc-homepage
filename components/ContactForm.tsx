@@ -82,10 +82,10 @@ export default function ContactForm() {
   }
 
   return (
-    <form onSubmit={handleSubmit} className="space-y-5">
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
+    <form onSubmit={handleSubmit} className="space-y-3 md:space-y-5">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-3 md:gap-5">
         <div>
-          <label className="block text-sm font-semibold text-white mb-2">
+          <label className="hidden md:block text-sm font-semibold text-white mb-2">
             Name *
           </label>
           <input
@@ -95,11 +95,11 @@ export default function ContactForm() {
             onChange={handleInputChange}
             required
             className="w-full px-4 py-3 bg-white/10 border-2 border-white/20 rounded-lg focus:outline-none focus:border-[#fdbd51] transition-colors text-white placeholder-white/50"
-            placeholder="Your full name"
+            placeholder="Your name *"
           />
         </div>
         <div>
-          <label className="block text-sm font-semibold text-white mb-2">
+          <label className="hidden md:block text-sm font-semibold text-white mb-2">
             Email *
           </label>
           <input
@@ -109,14 +109,14 @@ export default function ContactForm() {
             onChange={handleInputChange}
             required
             className="w-full px-4 py-3 bg-white/10 border-2 border-white/20 rounded-lg focus:outline-none focus:border-[#fdbd51] transition-colors text-white placeholder-white/50"
-            placeholder="your@email.com"
+            placeholder="your@email.com *"
           />
         </div>
       </div>
 
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-3 md:gap-5">
         <div>
-          <label className="block text-sm font-semibold text-white mb-2">
+          <label className="hidden md:block text-sm font-semibold text-white mb-2">
             Company
           </label>
           <input
@@ -129,7 +129,7 @@ export default function ContactForm() {
           />
         </div>
         <div>
-          <label className="block text-sm font-semibold text-white mb-2">
+          <label className="hidden md:block text-sm font-semibold text-white mb-2">
             Phone
           </label>
           <input
@@ -138,13 +138,13 @@ export default function ContactForm() {
             value={formData.phone}
             onChange={handleInputChange}
             className="w-full px-4 py-3 bg-white/10 border-2 border-white/20 rounded-lg focus:outline-none focus:border-[#fdbd51] transition-colors text-white placeholder-white/50"
-            placeholder="(555) 123-4567"
+            placeholder="Phone number"
           />
         </div>
       </div>
 
       <div>
-        <label className="block text-sm font-semibold text-white mb-2">
+        <label className="hidden md:block text-sm font-semibold text-white mb-2">
           Growing Region
         </label>
         <input
@@ -152,13 +152,13 @@ export default function ContactForm() {
           name="region"
           value={formData.region}
           onChange={handleInputChange}
-          placeholder="e.g., California, Mexico, etc."
+          placeholder="Growing region (e.g., California)"
           className="w-full px-4 py-3 bg-white/10 border-2 border-white/20 rounded-lg focus:outline-none focus:border-[#fdbd51] transition-colors text-white placeholder-white/50"
         />
       </div>
 
       <div>
-        <label className="block text-sm font-semibold text-white mb-2">
+        <label className="hidden md:block text-sm font-semibold text-white mb-2">
           Message *
         </label>
         <textarea
@@ -166,8 +166,9 @@ export default function ContactForm() {
           value={formData.message}
           onChange={handleInputChange}
           required
-          rows={5}
+          rows={4}
           className="w-full px-4 py-3 bg-white/10 border-2 border-white/20 rounded-lg focus:outline-none focus:border-[#fdbd51] transition-colors text-white placeholder-white/50 resize-none"
+          placeholder="Your message *"
         />
       </div>
 
@@ -188,4 +189,3 @@ export default function ContactForm() {
     </form>
   );
 }
-

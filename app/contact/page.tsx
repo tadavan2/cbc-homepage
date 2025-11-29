@@ -107,7 +107,7 @@ export default function ContactPage() {
       {/* Section 2: Working at CBC / Careers */}
       <section 
         id="careers" 
-        className="scroll-snap-section bg-[#6E903C] flex items-center justify-center"
+        className="scroll-snap-section bg-[#6E903C] flex items-start md:items-center justify-center pt-[15vh] md:pt-0"
       >
         <div className="container px-4 py-12 md:py-20" style={{ paddingTop: '60px' }}>
           <div className={`max-w-3xl mx-auto text-center ${activeSection >= 1 ? 'animate-fade-in' : 'opacity-0'}`}>

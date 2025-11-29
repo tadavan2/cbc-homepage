@@ -77,10 +77,10 @@ export default function AboutPage() {
       className="scroll-snap-container"
       style={{ scrollSnapType: 'y mandatory', overflowY: 'auto' }}
     >
-      {/* Section 1: Hero with Video Placeholder */}
+      {/* Section 1: Hero with Video Placeholder - 30% */}
       <section 
         id="hero" 
-        className="scroll-snap-section bg-[#355e82] flex items-start md:items-center justify-center pt-[15vh] md:pt-0"
+        className="scroll-snap-section bg-[#355e82] flex items-start md:items-center justify-center pt-[10vh] md:pt-0"
       >
         <div className="container px-4 py-12 md:py-20" style={{ paddingTop: '60px' }}>
           <div className={`max-w-4xl mx-auto text-center ${activeSection >= 0 ? 'animate-fade-in' : 'opacity-0'}`}>
@@ -147,7 +147,7 @@ export default function AboutPage() {
       {/* Section 3: Our Team */}
       <section 
         id="team" 
-        className="scroll-snap-section bg-[#c93834] flex items-start md:items-center justify-center pt-[15vh] md:pt-0"
+        className="scroll-snap-section bg-[#c93834] flex items-start md:items-center justify-center pt-[12vh] md:pt-0"
       >
         <div className="container px-4 py-20">
           <div className={`max-w-4xl mx-auto text-center ${activeSection >= 2 ? 'animate-fade-in' : 'opacity-0'}`}>
@@ -201,7 +201,7 @@ export default function AboutPage() {
       {/* Section 5: Our Partners */}
       <section 
         id="partners" 
-        className="scroll-snap-section bg-[#fdbd51] flex items-start md:items-center justify-center pt-[15vh] md:pt-0"
+        className="scroll-snap-section bg-[#fdbd51] flex items-start md:items-center justify-center pt-[10vh] md:pt-0"
       >
         <div className="container px-4 py-10 md:py-16" style={{ paddingTop: '50px' }}>
           <div className={`max-w-5xl mx-auto ${activeSection >= 4 ? 'animate-fade-in' : 'opacity-0'}`}>
@@ -213,7 +213,7 @@ export default function AboutPage() {
             </p>
             
             {/* Partner Cards - 3 columns on desktop, 2 on mobile */}
-            <div className="grid grid-cols-2 md:grid-cols-3 gap-2 md:gap-3">
+            <div className="grid grid-cols-2 md:grid-cols-3 gap-2 md:gap-3" style={{ marginBottom: '80px' }}>
               <a 
                 href="https://www.calgiant.com" 
                 target="_blank" 
@@ -283,7 +283,7 @@ export default function AboutPage() {
       {/* Section 6: Explore Our Work */}
       <section 
         id="explore" 
-        className="scroll-snap-section bg-[#c4daf4] flex items-start md:items-center justify-center pt-[15vh] md:pt-0"
+        className="scroll-snap-section bg-[#c4daf4] flex items-start md:items-center justify-center pt-[20vh] md:pt-0"
       >
         <div className="container px-4 py-20">
           <div className={`max-w-3xl mx-auto text-center ${activeSection >= 5 ? 'animate-fade-in' : 'opacity-0'}`}>
