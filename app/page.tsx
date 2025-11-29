@@ -214,7 +214,7 @@ export default function Home() {
           `} style={{ animationDelay: '0.1s' }}>
             Discover our premium varieties designed for superior performance and grower success.
           </p>
-          {/* Banner Grid - 2 columns on desktop, 1 on mobile */}
+          {/* Banner Grid - 2 columns on desktop, 1 on mobile (3 on mobile, 4 on desktop) */}
           <div className="grid grid-cols-1 md:grid-cols-2 gap-2 md:gap-4 max-w-5xl mx-auto mb-4">
             {featuredCultivars.map((cultivar, index) => (
               <a
@@ -224,6 +224,7 @@ export default function Home() {
                 rel="noopener noreferrer"
                 className={`block overflow-hidden rounded-2xl border-2 border-white/20 hover:border-white/50 hover:scale-[1.02] transition-all cursor-pointer shadow-lg hover:shadow-2xl
                   ${activeSection >= 2 ? 'animate-slide-in' : 'opacity-0'}
+                  ${index === 3 ? 'hidden md:block' : ''}
                 `}
                 style={{ animationDelay: `${0.2 + index * 0.1}s` }}
               >
