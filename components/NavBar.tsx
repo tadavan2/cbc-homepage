@@ -41,14 +41,8 @@ export default function NavBar() {
               <span className="text-[#6E903C] text-base md:text-lg font-bold tracking-tight">CULTIVARS</span>
             </Link>
 
-            {/* Desktop Navigation */}
+            {/* Desktop Navigation - Company name is the Home link */}
             <div className="hidden md:flex items-center gap-6 lg:gap-8">
-              <Link 
-                href="/" 
-                className="text-xs md:text-sm uppercase tracking-[0.15em] text-black hover:text-[#BF1B2C] transition-colors font-semibold"
-              >
-                Home
-              </Link>
               <a
                 href="https://cultivars.cbcberry.com"
                 target="_blank"
@@ -103,13 +97,6 @@ export default function NavBar() {
           <div className="fixed right-0 top-0 bottom-0 z-50 w-80 bg-white/10 backdrop-blur-3xl border-l border-white/20 md:hidden shadow-2xl">
             <div className="container px-6" style={{ paddingTop: '30px' }}>
               <nav className="flex flex-col gap-6">
-                <Link 
-                  href="/" 
-                  onClick={() => setIsOpen(false)}
-                  className="text-lg uppercase tracking-[0.15em] text-black hover:text-[#BF1B2C] transition-colors font-semibold"
-                >
-                  Home
-                </Link>
                 <a
                   href="https://cultivars.cbcberry.com"
                   target="_blank"

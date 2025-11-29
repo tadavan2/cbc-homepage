@@ -9,6 +9,7 @@ import IntroOverlay from '@/components/IntroOverlay';
 
 export default function Home() {
   const [introComplete, setIntroComplete] = useState(false);
+  const [skipAnimation, setSkipAnimation] = useState(false); // For back navigation
   const [activeSection, setActiveSection] = useState(0);
   const [featuredCultivars, setFeaturedCultivars] = useState<Cultivar[]>([]);
   const containerRef = useRef<HTMLDivElement>(null);
@@ -26,8 +27,9 @@ export default function Home() {
       
       if (isImmediate) {
         // Back/forward navigation - show content immediately, no animation
+        setSkipAnimation(true);
         setIntroComplete(true);
-        setActiveSection(0);
+        setActiveSection(5); // Set high so all sections show
       } else {
         // Normal reveal - fade in after panel slide
         setTimeout(() => {
@@ -83,10 +85,21 @@ export default function Home() {
         </div>
         
         <div 
-          className={`container relative z-10 py-20 ${introComplete ? 'animate-hero-fade-in' : 'opacity-0'}`}
+          className={`container relative z-10 py-20 ${introComplete ? (skipAnimation ? 'opacity-100' : 'animate-hero-fade-in') : 'opacity-0'}`}
         >
           <div className="max-w-4xl mx-auto text-center px-4">
-            {/* Explore Cultivars button at TOP - primary CTA */}
+            <p className="text-[#fdbd51] uppercase tracking-[0.2em] text-xs md:text-sm mb-6 font-semibold">
+              {tagLines[2]}
+            </p>
+            <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold mb-8 leading-tight">
+              <span className="text-white">Better berries</span>
+              <br />
+              <span className="text-[#fdbd51]">for growers,</span>
+              <br />
+              <span className="text-white">worldwide.</span>
+            </h1>
+            
+            {/* Explore Cultivars button - below headline */}
             <div className="flex justify-center mb-8">
               <a
                 href="https://cultivars.cbcberry.com"
@@ -98,16 +111,6 @@ export default function Home() {
               </a>
             </div>
             
-            <p className="text-[#fdbd51] uppercase tracking-[0.2em] text-xs md:text-sm mb-6 font-semibold">
-              {tagLines[2]}
-            </p>
-            <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold mb-8 leading-tight">
-              <span className="text-white">Better berries</span>
-              <br />
-              <span className="text-[#fdbd51]">for growers,</span>
-              <br />
-              <span className="text-white">worldwide.</span>
-            </h1>
             <p className="text-lg md:text-xl text-white/90 max-w-2xl mx-auto leading-relaxed text-justify">
               {brandMission}
             </p>
@@ -129,7 +132,7 @@ export default function Home() {
         <div className="container px-4 py-20">
           <div className={`grid grid-cols-1 md:grid-cols-3 gap-8 ${activeSection >= 1 ? 'animate-visible' : ''}`}>
             <Link 
-              href="/cultivar-development"
+              href="/breeding#cultivar-development"
               className={`bg-white/20 backdrop-blur-sm p-8 rounded-2xl border-2 border-white/30 hover:bg-white/30 hover:scale-[1.02] transition-all cursor-pointer block mt-5 md:mt-0
                 ${activeSection >= 1 ? 'animate-slide-in' : 'opacity-0'}
               `}
@@ -142,7 +145,7 @@ export default function Home() {
               </p>
             </Link>
             <Link 
-              href="/disease-testing"
+              href="/breeding#field-testing"
               className={`bg-white/20 backdrop-blur-sm p-8 rounded-2xl border-2 border-white/30 hover:bg-white/30 hover:scale-[1.02] transition-all cursor-pointer block
                 ${activeSection >= 1 ? 'animate-slide-in' : 'opacity-0'}
               `}
@@ -155,7 +158,7 @@ export default function Home() {
               </p>
             </Link>
             <Link 
-              href="/grower-partnerships"
+              href="/breeding#grower-partnerships"
               className={`bg-white/20 backdrop-blur-sm p-8 rounded-2xl border-2 border-white/30 hover:bg-white/30 hover:scale-[1.02] transition-all cursor-pointer block
                 ${activeSection >= 1 ? 'animate-slide-in' : 'opacity-0'}
               `}

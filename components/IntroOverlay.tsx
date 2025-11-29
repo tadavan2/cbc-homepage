@@ -32,17 +32,40 @@ export default function IntroOverlay() {
 
   // Check if this is a back/forward navigation - if so, skip intro
   useEffect(() => {
-    // Use Performance Navigation API to detect navigation type
+    // Method 1: Performance Navigation API
     const navEntries = performance.getEntriesByType('navigation') as PerformanceNavigationTiming[];
     const navType = navEntries[0]?.type;
     
     if (navType === 'back_forward') {
-      // User pressed back/forward - skip intro entirely
       setSkipIntro(true);
       setPhase('done');
-      // Immediately notify page to show content (no animation)
       window.dispatchEvent(new CustomEvent('intro-reveal', { detail: { immediate: true } }));
+      return;
     }
+    
+    // Method 2: Check sessionStorage for recent visit (within last 30 seconds)
+    const lastVisit = sessionStorage.getItem('cbc-intro-seen');
+    const now = Date.now();
+    if (lastVisit && (now - parseInt(lastVisit)) < 30000) {
+      // User was here less than 30 seconds ago - likely back navigation
+      setSkipIntro(true);
+      setPhase('done');
+      window.dispatchEvent(new CustomEvent('intro-reveal', { detail: { immediate: true } }));
+      return;
+    }
+    
+    // Method 3: Listen for pageshow event (bfcache)
+    const handlePageShow = (e: PageTransitionEvent) => {
+      if (e.persisted) {
+        // Page was restored from bfcache (back/forward)
+        setSkipIntro(true);
+        setPhase('done');
+        window.dispatchEvent(new CustomEvent('intro-reveal', { detail: { immediate: true } }));
+      }
+    };
+    
+    window.addEventListener('pageshow', handlePageShow);
+    return () => window.removeEventListener('pageshow', handlePageShow);
   }, []);
 
   // Detect mobile on mount and resize
@@ -56,6 +79,9 @@ export default function IntroOverlay() {
   const triggerReveal = useCallback(() => {
     if (phase !== 'hold') return;
     setPhase('reveal');
+    
+    // Mark that user has seen intro (for back navigation detection)
+    sessionStorage.setItem('cbc-intro-seen', Date.now().toString());
     
     // Notify page.tsx to start showing content (with animation)
     window.dispatchEvent(new CustomEvent('intro-reveal', { detail: { immediate: false } }));
