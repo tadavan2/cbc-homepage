@@ -14,11 +14,48 @@ import Link from 'next/link';
  * 5. Grower Partnerships
  */
 
+// Section mapping for hash navigation
+const sectionMap: Record<string, number> = {
+  'cultivar-development': 0,
+  'field-testing': 1,
+  'pathology': 2,
+  'cleanstock': 3,
+  'grower-partnerships': 4,
+};
+
 export default function BreedingPage() {
   const [activeSection, setActiveSection] = useState(0);
   const containerRef = useRef<HTMLDivElement>(null);
+  const [isReady, setIsReady] = useState(false);
 
-  // Track which section is visible
+  // Handle hash navigation on mount - set section immediately so content is visible
+  useEffect(() => {
+    const hash = window.location.hash.slice(1);
+    if (hash) {
+      const sectionIndex = sectionMap[hash];
+      if (sectionIndex !== undefined) {
+        // Set activeSection immediately so content is visible
+        setActiveSection(sectionIndex);
+      }
+    }
+    setIsReady(true);
+  }, []);
+
+  // Scroll to hash section after layout is ready
+  useEffect(() => {
+    if (!isReady) return;
+    
+    const hash = window.location.hash.slice(1);
+    if (hash) {
+      const targetSection = document.getElementById(hash);
+      if (targetSection) {
+        // Use instant scroll to avoid jarring animation
+        targetSection.scrollIntoView({ behavior: 'instant', block: 'start' });
+      }
+    }
+  }, [isReady]);
+
+  // Track which section is visible on scroll
   useEffect(() => {
     const container = containerRef.current;
     if (!container) return;
@@ -32,29 +69,6 @@ export default function BreedingPage() {
 
     container.addEventListener('scroll', handleScroll, { passive: true });
     return () => container.removeEventListener('scroll', handleScroll);
-  }, []);
-
-  // Handle hash navigation on mount
-  useEffect(() => {
-    const hash = window.location.hash.slice(1);
-    if (hash && containerRef.current) {
-      const sectionMap: Record<string, number> = {
-        'cultivar-development': 0,
-        'field-testing': 1,
-        'pathology': 2,
-        'cleanstock': 3,
-        'grower-partnerships': 4,
-      };
-      const sectionIndex = sectionMap[hash];
-      if (sectionIndex !== undefined) {
-        setTimeout(() => {
-          containerRef.current?.scrollTo({
-            top: sectionIndex * window.innerHeight,
-            behavior: 'smooth'
-          });
-        }, 100);
-      }
-    }
   }, []);
 
   return (

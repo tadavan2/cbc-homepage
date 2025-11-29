@@ -9,7 +9,7 @@ import IntroOverlay from '@/components/IntroOverlay';
 
 export default function Home() {
   const [introComplete, setIntroComplete] = useState(false);
-  const [skipAnimation, setSkipAnimation] = useState(false); // For back navigation
+  const [skipAnimation, setSkipAnimation] = useState(false);
   const [activeSection, setActiveSection] = useState(0);
   const [featuredCultivars, setFeaturedCultivars] = useState<Cultivar[]>([]);
   const containerRef = useRef<HTMLDivElement>(null);
@@ -19,22 +19,39 @@ export default function Home() {
     setFeaturedCultivars(getRandomCultivars(4));
   }, []);
 
-  // Listen for custom event from IntroOverlay when reveal starts
+  // Check for back navigation DIRECTLY on mount (don't rely on events)
+  useEffect(() => {
+    const navEntries = performance.getEntriesByType('navigation') as PerformanceNavigationTiming[];
+    const navType = navEntries[0]?.type;
+    
+    // Also check sessionStorage for recent visit
+    const lastVisit = sessionStorage.getItem('cbc-intro-seen');
+    const now = Date.now();
+    const recentVisit = lastVisit && (now - parseInt(lastVisit)) < 30000;
+    
+    if (navType === 'back_forward' || recentVisit) {
+      // Back navigation detected - show content immediately
+      setSkipAnimation(true);
+      setIntroComplete(true);
+      setActiveSection(5);
+    }
+  }, []);
+
+  // Listen for normal intro reveal (user scrolled through intro)
   useEffect(() => {
     const handleIntroReveal = (e: Event) => {
       const customEvent = e as CustomEvent<{ immediate?: boolean }>;
       const isImmediate = customEvent.detail?.immediate;
       
       if (isImmediate) {
-        // Back/forward navigation - show content immediately, no animation
+        // Already handled by the check above, but handle anyway
         setSkipAnimation(true);
         setIntroComplete(true);
-        setActiveSection(5); // Set high so all sections show
+        setActiveSection(5);
       } else {
         // Normal reveal - fade in after panel slide
         setTimeout(() => {
           setIntroComplete(true);
-          // Reset scroll to top
           if (containerRef.current) {
             containerRef.current.scrollTop = 0;
           }
