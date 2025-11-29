@@ -5,6 +5,11 @@ import { useState, useEffect, useCallback } from 'react';
 /**
  * Intro Overlay
  * 
+ * NAVIGATION BEHAVIOR:
+ * - Fresh load / Home click → SHOW intro
+ * - Browser back/forward → SKIP intro (go straight to hero)
+ * - Page refresh (F5) → SHOW intro
+ * 
  * HOLD STATE:
  * - Red background (#BF1B2C) covers screen
  * - Sun graphic centered
@@ -12,7 +17,7 @@ import { useState, useEffect, useCallback } from 'react';
  * - "Scroll to enter" hint at bottom
  * 
  * ON SCROLL:
- * - Green panel slides in from left
+ * - Blue panel slides in from left
  * - Dark red panel slides in from right
  * - Sun and text fade out
  * - Overlay fades out, revealing page content
@@ -23,6 +28,22 @@ import { useState, useEffect, useCallback } from 'react';
 export default function IntroOverlay() {
   const [phase, setPhase] = useState<'hold' | 'reveal' | 'fadeout' | 'done'>('hold');
   const [isMobile, setIsMobile] = useState(false);
+  const [skipIntro, setSkipIntro] = useState(false);
+
+  // Check if this is a back/forward navigation - if so, skip intro
+  useEffect(() => {
+    // Use Performance Navigation API to detect navigation type
+    const navEntries = performance.getEntriesByType('navigation') as PerformanceNavigationTiming[];
+    const navType = navEntries[0]?.type;
+    
+    if (navType === 'back_forward') {
+      // User pressed back/forward - skip intro entirely
+      setSkipIntro(true);
+      setPhase('done');
+      // Immediately notify page to show content (no animation)
+      window.dispatchEvent(new CustomEvent('intro-reveal', { detail: { immediate: true } }));
+    }
+  }, []);
 
   // Detect mobile on mount and resize
   useEffect(() => {
@@ -36,8 +57,8 @@ export default function IntroOverlay() {
     if (phase !== 'hold') return;
     setPhase('reveal');
     
-    // Notify page.tsx to start showing content
-    window.dispatchEvent(new CustomEvent('intro-reveal'));
+    // Notify page.tsx to start showing content (with animation)
+    window.dispatchEvent(new CustomEvent('intro-reveal', { detail: { immediate: false } }));
     
     // After panels slide in (1s), start fading out the entire overlay
     setTimeout(() => setPhase('fadeout'), 1000);
@@ -69,7 +90,8 @@ export default function IntroOverlay() {
     };
   }, [phase, triggerReveal]);
 
-  if (phase === 'done') return null;
+  // If skipping intro or done, render nothing
+  if (phase === 'done' || skipIntro) return null;
 
   const isRevealing = phase === 'reveal' || phase === 'fadeout';
   const isFadingOut = phase === 'fadeout';

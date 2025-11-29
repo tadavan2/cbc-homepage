@@ -20,16 +20,25 @@ export default function Home() {
 
   // Listen for custom event from IntroOverlay when reveal starts
   useEffect(() => {
-    const handleIntroReveal = () => {
-      // Start fade 0.5s after green panel starts sliding
-      setTimeout(() => {
+    const handleIntroReveal = (e: Event) => {
+      const customEvent = e as CustomEvent<{ immediate?: boolean }>;
+      const isImmediate = customEvent.detail?.immediate;
+      
+      if (isImmediate) {
+        // Back/forward navigation - show content immediately, no animation
         setIntroComplete(true);
-        // Reset scroll to top
-        if (containerRef.current) {
-          containerRef.current.scrollTop = 0;
-        }
-        window.scrollTo(0, 0);
-      }, 500);
+        setActiveSection(0);
+      } else {
+        // Normal reveal - fade in after panel slide
+        setTimeout(() => {
+          setIntroComplete(true);
+          // Reset scroll to top
+          if (containerRef.current) {
+            containerRef.current.scrollTop = 0;
+          }
+          window.scrollTo(0, 0);
+        }, 500);
+      }
     };
     
     window.addEventListener('intro-reveal', handleIntroReveal);
