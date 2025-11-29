@@ -144,8 +144,11 @@ export default function Home() {
         )}
       </section>
 
-      {/* What We Do - Yellow section */}
-      <section className="scroll-snap-section bg-[#fdbd51] flex items-center">
+      {/* What We Do - Gradient section */}
+      <section 
+        className="scroll-snap-section flex items-center"
+        style={{ background: 'linear-gradient(to bottom right, #355e82 0%, #fdbd51 100%)' }}
+      >
         <div className="container px-4 py-20">
           <div className={`grid grid-cols-1 md:grid-cols-2 gap-6 max-w-5xl mx-auto ${activeSection >= 1 ? 'animate-visible' : ''}`}>
             <Link 
@@ -155,8 +158,8 @@ export default function Home() {
               `}
               style={{ animationDelay: '0.1s' }}
             >
-              <h3 className="text-2xl md:text-3xl font-bold mb-4 text-[#6E903C]">Cultivar Development</h3>
-              <p className="text-[#6E903C]/90 leading-relaxed text-justify">
+              <h3 className="text-2xl md:text-3xl font-bold mb-4 text-white">Cultivar Development</h3>
+              <p className="text-white/90 leading-relaxed text-justify">
                 Premium berry varieties for short-day and day-neutral production. Superior fruit quality 
                 that drives grower profitability.
               </p>
@@ -168,8 +171,8 @@ export default function Home() {
               `}
               style={{ animationDelay: '0.2s' }}
             >
-              <h3 className="text-2xl md:text-3xl font-bold mb-4 text-[#6E903C]">Disease & Field Testing</h3>
-              <p className="text-[#6E903C]/90 leading-relaxed text-justify">
+              <h3 className="text-2xl md:text-3xl font-bold mb-4 text-white">Disease & Field Testing</h3>
+              <p className="text-white/90 leading-relaxed text-justify">
                 Comprehensive screening for soil-borne pathogens and disease resistance. Multi-site trials 
                 validate performance across diverse growing conditions.
               </p>
@@ -181,8 +184,8 @@ export default function Home() {
               `}
               style={{ animationDelay: '0.3s' }}
             >
-              <h3 className="text-2xl md:text-3xl font-bold mb-4 text-[#6E903C]">Cleanstock Program</h3>
-              <p className="text-[#6E903C]/90 leading-relaxed text-justify">
+              <h3 className="text-2xl md:text-3xl font-bold mb-4 text-white">Cleanstock Program</h3>
+              <p className="text-white/90 leading-relaxed text-justify">
                 Certified virus-free foundation stock ensures genetic integrity. The highest standards 
                 for nursery propagation and commercial planting material.
               </p>
@@ -194,8 +197,8 @@ export default function Home() {
               `}
               style={{ animationDelay: '0.4s' }}
             >
-              <h3 className="text-2xl md:text-3xl font-bold mb-4 text-[#6E903C]">Grower Partnerships</h3>
-              <p className="text-[#6E903C]/90 leading-relaxed text-justify">
+              <h3 className="text-2xl md:text-3xl font-bold mb-4 text-white">Grower Partnerships</h3>
+              <p className="text-white/90 leading-relaxed text-justify">
                 Direct collaboration with commercial growers. On-farm trials and licensing programs ensure 
                 cultivars deliver real-world results.
               </p>
