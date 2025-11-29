@@ -96,7 +96,7 @@ export default function ContactPage() {
             </div>
             
             {/* Office Location */}
-            <div className="mt-8 text-center">
+            <div className="mt-8 text-center" style={{ marginBottom: '80px' }}>
               <p className="text-white/70 text-sm uppercase tracking-wider mb-2">Office Location</p>
               <p className="text-white/90">
                 818 E French Camp Rd, French Camp, CA 95231
@@ -163,7 +163,7 @@ export default function ContactPage() {
             </div>
 
             {/* Application Form */}
-            <div className="bg-white/10 backdrop-blur-sm p-5 md:p-6 rounded-2xl border-2 border-white/20">
+            <div className="bg-white/10 backdrop-blur-sm p-5 md:p-6 rounded-2xl border-2 border-white/20" style={{ marginBottom: '80px' }}>
               <h3 className="text-lg font-bold text-white mb-4 text-center">Submit Your Application</h3>
               <ApplicationForm />
             </div>

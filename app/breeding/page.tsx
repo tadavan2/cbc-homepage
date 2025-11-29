@@ -175,9 +175,11 @@ export default function BreedingPage() {
               Cleanstock<br />Program
             </h2>
             <p className="text-lg md:text-xl text-white/90 max-w-2xl mx-auto leading-relaxed text-justify">
-              Certified virus-free foundation stock ensures the genetic integrity and health of 
-              every plant. Our cleanstock program maintains the highest standards for nursery 
-              propagation and commercial planting material.
+              Our cleanstock program participates in the CDFA Strawberry Registration & Certification 
+              Program, established in 1949 to ensure the health and quality of strawberry planting stock. 
+              Foundation plants are produced through meristem tissue culture—a process that eliminates 
+              pathogens through heat treatment and sterile cultivation of meristem tips, ensuring 
+              disease-free, vigorous planting material for nurseries and commercial growers.
             </p>
           </div>
         </div>
@@ -201,12 +203,18 @@ export default function BreedingPage() {
               and licensing programs ensure our cultivars deliver real-world results. We work 
               alongside growers to optimize production and maximize profitability.
             </p>
-            <div className="flex justify-center">
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link 
                 href="/contact"
                 className="bg-[#fdbd51] text-black px-8 py-4 rounded-full font-bold uppercase tracking-wider text-sm hover:bg-[#fdbd51]/90 transition-all hover:scale-105"
               >
                 Partner With Us
+              </Link>
+              <Link 
+                href="/cultivar-sublicense"
+                className="bg-white/10 text-white border-2 border-white/30 px-8 py-4 rounded-full font-bold uppercase tracking-wider text-sm hover:bg-white/20 transition-all hover:scale-105"
+              >
+                Cultivar Sublicense
               </Link>
             </div>
           </div>

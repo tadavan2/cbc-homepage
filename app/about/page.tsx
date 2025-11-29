@@ -231,29 +231,44 @@ export default function AboutPage() {
                 rel="noopener noreferrer"
                 className="bg-white/30 backdrop-blur-sm p-3 md:p-4 rounded-lg border-2 border-white/40 hover:bg-white/50 hover:scale-[1.02] transition-all"
               >
-                <h3 className="text-sm md:text-base font-bold text-[#355e82] mb-1">Int'l Semillas →</h3>
+                <h3 className="text-sm md:text-base font-bold text-[#355e82] mb-1">International Semillas →</h3>
                 <p className="text-[#355e82]/80 text-xs leading-relaxed">
                   International marketing and cultivar licensing partner.
                 </p>
               </a>
-              <div className="bg-white/30 backdrop-blur-sm p-3 md:p-4 rounded-lg border-2 border-white/40">
-                <h3 className="text-sm md:text-base font-bold text-[#355e82] mb-1">GemPak</h3>
+              <a 
+                href="https://www.gem-packberries.com" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="bg-white/30 backdrop-blur-sm p-3 md:p-4 rounded-lg border-2 border-white/40 hover:bg-white/50 hover:scale-[1.02] transition-all"
+              >
+                <h3 className="text-sm md:text-base font-bold text-[#355e82] mb-1">Gem-Pack Berries →</h3>
                 <p className="text-[#355e82]/80 text-xs leading-relaxed">
                   Premium produce company in Southern California.
                 </p>
-              </div>
-              <div className="bg-white/30 backdrop-blur-sm p-3 md:p-4 rounded-lg border-2 border-white/40">
-                <h3 className="text-sm md:text-base font-bold text-[#355e82] mb-1">Daren Gee</h3>
+              </a>
+              <a 
+                href="https://bwgberries.com" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="bg-white/30 backdrop-blur-sm p-3 md:p-4 rounded-lg border-2 border-white/40 hover:bg-white/50 hover:scale-[1.02] transition-all"
+              >
+                <h3 className="text-sm md:text-base font-bold text-[#355e82] mb-1">Daren's Berries →</h3>
                 <p className="text-[#355e82]/80 text-xs leading-relaxed">
                   Santa Maria grower and development partner.
                 </p>
-              </div>
-              <div className="bg-white/30 backdrop-blur-sm p-3 md:p-4 rounded-lg border-2 border-white/40">
-                <h3 className="text-sm md:text-base font-bold text-[#355e82] mb-1">Shinta Kawahara</h3>
+              </a>
+              <a 
+                href="https://www.skberries.com" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="bg-white/30 backdrop-blur-sm p-3 md:p-4 rounded-lg border-2 border-white/40 hover:bg-white/50 hover:scale-[1.02] transition-all"
+              >
+                <h3 className="text-sm md:text-base font-bold text-[#355e82] mb-1">Shinta Kawahara →</h3>
                 <p className="text-[#355e82]/80 text-xs leading-relaxed">
                   Third-generation Watsonville family farm.
                 </p>
-              </div>
+              </a>
               <div className="bg-white/30 backdrop-blur-sm p-3 md:p-4 rounded-lg border-2 border-white/40">
                 <h3 className="text-sm md:text-base font-bold text-[#355e82] mb-1">Fujishige Farms</h3>
                 <p className="text-[#355e82]/80 text-xs leading-relaxed">
