@@ -220,3 +220,51 @@ html {
 .animate-subtle-pulse {
   animation: subtlePulse 2s ease-in-out infinite;
 }
+
+/*
+ * SUNSET ANIMATION SYSTEM
+ * =======================
+ * Total cycle: 16 seconds
+ * Initial delay: 1 second
+ * 
+ * TIMELINE:
+ * ---------
+ * 0.0s - 2.0s  (0% - 12.5%)   : TOP PAUSE    | sun=0px,  dim=0%
+ * 2.0s - 8.0s  (12.5% - 50%)  : DESCENDING   | sun→50px, dim→40%
+ * 8.0s - 10.0s (50% - 62.5%)  : BOTTOM PAUSE | sun=50px, dim=40%
+ * 10.0s - 16.0s (62.5% - 100%): ASCENDING    | sun→0px,  dim→0%
+ */
+
+@keyframes sunCycle {
+  0%, 12.5% {
+    transform: translateY(0);
+  }
+  50%, 62.5% {
+    transform: translateY(50px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+@keyframes dimCycle {
+  0%, 12.5% {
+    opacity: 0;
+  }
+  50%, 62.5% {
+    opacity: 0.4;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+.animate-sun-bounce {
+  animation: sunCycle 16s linear infinite;
+  animation-delay: 1s;
+}
+
+.animate-sunset-dim {
+  animation: dimCycle 16s linear infinite;
+  animation-delay: 1s;
+}

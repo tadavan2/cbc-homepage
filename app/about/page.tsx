@@ -106,11 +106,10 @@ export default function AboutPage() {
       >
         <div className="container px-4 py-12 md:py-20" style={{ paddingTop: '60px' }}>
           <div className={`max-w-4xl mx-auto text-center ${activeSection >= 0 ? 'animate-fade-in' : 'opacity-0'}`}>
-            <p className="text-[#fdbd51] uppercase tracking-[0.2em] text-xs md:text-sm mb-6 font-semibold">
+            <p className="text-[#fdbd51] uppercase tracking-[0.2em] text-sm md:text-base mb-6 font-semibold" style={{ paddingTop: '10px' }}>
               Who We Are
             </p>
-            <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold mb-8 leading-tight text-white" style={{ fontFamily: 'Jost, sans-serif' }}>
-              About<br />
+            <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold mb-8 leading-tight" style={{ fontFamily: 'Jost, sans-serif' }}>
               <span className="text-[#fdbd51] font-medium">California </span>
               <span className="text-[#BF1B2C] font-extrabold">Berry </span>
               <span className="text-[#6E903C] font-medium">Cultivars</span>
@@ -121,7 +120,7 @@ export default function AboutPage() {
             </p>
             
             {/* Video Player */}
-            <div className="max-w-3xl mx-auto rounded-2xl overflow-hidden border-2 border-white/20 relative">
+            <div className="max-w-3xl mx-auto rounded-2xl overflow-hidden border-2 border-white/20 relative" style={{ marginBottom: '80px' }}>
               <video
                 ref={videoRef}
                 className="w-full aspect-video object-cover"

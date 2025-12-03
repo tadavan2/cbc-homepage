@@ -39,3 +39,8 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# Development/reference files (not needed in prod)
+/scripts/
+/data/scraped-content/
+/data/competitor-research/

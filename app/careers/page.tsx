@@ -2,55 +2,22 @@
 
 import Link from 'next/link';
 import ApplicationForm from '@/components/ApplicationForm';
+import { currentOpenings, categories, locations, getJobsByCategory } from '@/data/jobOpenings';
 
 // =============================================================================
-// CURRENT JOB OPENINGS
+// CAREERS PAGE
 // 
+// Job openings are managed in: /data/jobOpenings.ts
+// That file is the single source of truth for both this page AND the 
+// application form dropdown.
+//
 // To update jobs:
 // 1. Export job description as PDF to /public/docs/jobs/[filename].pdf
-// 2. Add/edit entry below with title, location, category, and pdf path
-// 3. Remove jobs by deleting or commenting out the line
-//
-// Categories: 'research' | 'operations' | 'business' | 'international'
+// 2. Edit /data/jobOpenings.ts - add/remove entries in currentOpenings array
+// 3. That's it! Both this page and the form dropdown will update automatically.
 // =============================================================================
 
-const currentOpenings = [
-  { title: 'Farm Manager', location: 'French Camp, CA', category: 'operations', pdf: '/docs/jobs/FarmManager.pdf' },
-  { title: 'Field Technician', location: 'Oxnard, CA', category: 'operations', pdf: '/docs/jobs/FieldTech.pdf' },
-  { title: 'Meristem Lab Technician', location: 'French Camp, CA', category: 'research', pdf: '/docs/jobs/MeristemTech.pdf' },
-  { title: 'Pathology Lab Assistant', location: 'French Camp, CA', category: 'research', pdf: '/docs/jobs/PathTech.pdf' },
-  { title: 'Trial Specialist', location: 'Multiple Locations', category: 'research', pdf: '/docs/jobs/TrialSpecialist.pdf' },
-  // Add more jobs here...
-];
-
-// =============================================================================
-// CATEGORY DEFINITIONS (styling only - don't need to edit often)
-// =============================================================================
-
-const categories: Record<string, { title: string; color: string }> = {
-  research: { title: 'Research & Development', color: '#6E903C' },
-  operations: { title: 'Farm & Field Operations', color: '#355e82' },
-  business: { title: 'Business & Administration', color: '#c93834' },
-  international: { title: 'CBC International', color: '#fdbd51' },
-};
-
-// =============================================================================
-// LOCATIONS
-// =============================================================================
-
-const locations = [
-  { name: 'French Camp, CA', description: 'Headquarters, Cleanstock, Breeding Nursery, Pathology', type: 'Headquarters' },
-  { name: 'Oxnard, CA', description: 'Short-Day Test Plots', type: 'Field Trials' },
-  { name: 'Watsonville, CA', description: 'Day-Neutral & Field Pathology Testing', type: 'Field Trials' },
-  { name: 'Huelva, Spain', description: 'CBC International', type: 'International' },
-];
-
-// Group jobs by category
-const jobsByCategory = currentOpenings.reduce((acc, job) => {
-  if (!acc[job.category]) acc[job.category] = [];
-  acc[job.category].push(job);
-  return acc;
-}, {} as Record<string, typeof currentOpenings>);
+const jobsByCategory = getJobsByCategory();
 
 export default function CareersPage() {
   return (
@@ -112,9 +79,9 @@ export default function CareersPage() {
               <div className="space-y-3">
                 {Object.entries(jobsByCategory).map(([catKey, jobs]) => (
                   <div key={catKey} className="bg-white rounded-lg overflow-hidden">
-                    <div className="p-3 border-l-4" style={{ borderColor: categories[catKey]?.color }}>
-                      <h3 className="text-sm font-bold" style={{ color: categories[catKey]?.color }}>
-                        {categories[catKey]?.title}
+                    <div className="p-3 border-l-4" style={{ borderColor: categories[catKey as keyof typeof categories]?.color }}>
+                      <h3 className="text-sm font-bold" style={{ color: categories[catKey as keyof typeof categories]?.color }}>
+                        {categories[catKey as keyof typeof categories]?.title}
                       </h3>
                     </div>
                     <div className="divide-y divide-gray-100">

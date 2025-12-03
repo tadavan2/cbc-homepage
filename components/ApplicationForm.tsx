@@ -1,6 +1,17 @@
 'use client';
 
 import { useState, useRef } from 'react';
+import { currentOpenings } from '@/data/jobOpenings';
+
+// =============================================================================
+// APPLICATION FORM
+// 
+// Position dropdown is auto-populated from: /data/jobOpenings.ts
+// That file is the single source of truth - when jobs are added/removed there,
+// the dropdown here updates automatically.
+//
+// "General Interest" and "Other" are always included as fallback options.
+// =============================================================================
 
 export default function ApplicationForm() {
   const [isSubmitting, setIsSubmitting] = useState(false);
@@ -173,13 +184,16 @@ export default function ApplicationForm() {
             required
             className="w-full px-4 py-3 bg-white/10 border-2 border-white/20 rounded-lg focus:outline-none focus:border-[#fdbd51] transition-colors text-white"
           >
-            <option value="" className="bg-[#6E903C]">Select a position...</option>
-            <option value="Research Associate" className="bg-[#6E903C]">Research Associate</option>
-            <option value="Field Technician" className="bg-[#6E903C]">Field Technician</option>
-            <option value="Plant Breeder" className="bg-[#6E903C]">Plant Breeder</option>
-            <option value="Lab Technician" className="bg-[#6E903C]">Lab Technician</option>
-            <option value="General Interest" className="bg-[#6E903C]">General Interest</option>
-            <option value="Other" className="bg-[#6E903C]">Other</option>
+            <option value="" className="bg-[#355e82]">Select a position...</option>
+            {/* Dynamic options from current job openings */}
+            {currentOpenings.map((job, i) => (
+              <option key={i} value={job.title} className="bg-[#355e82]">
+                {job.title}
+              </option>
+            ))}
+            {/* Always-available fallback options */}
+            <option value="General Interest" className="bg-[#355e82]">General Interest</option>
+            <option value="Other" className="bg-[#355e82]">Other</option>
           </select>
         </div>
       </div>
@@ -228,11 +242,11 @@ export default function ApplicationForm() {
       <button
         type="submit"
         disabled={isSubmitting}
-        className="w-full bg-[#fdbd51] text-[#6E903C] px-8 py-4 rounded-full font-bold uppercase tracking-wider text-sm hover:bg-[#fdbd51]/90 transition-all disabled:opacity-50 disabled:cursor-not-allowed"
+        className="w-full bg-[#fdbd51] text-[#355e82] px-8 py-4 rounded-full font-bold uppercase tracking-wider text-sm hover:bg-[#fdbd51]/90 transition-all disabled:opacity-50 disabled:cursor-not-allowed"
       >
         {isSubmitting ? (
           <span className="flex items-center justify-center gap-2">
-            <span className="w-4 h-4 border-2 border-[#6E903C] border-t-transparent rounded-full animate-spin"></span>
+            <span className="w-4 h-4 border-2 border-[#355e82] border-t-transparent rounded-full animate-spin"></span>
             Submitting...
           </span>
         ) : (
@@ -242,4 +256,3 @@ export default function ApplicationForm() {
     </form>
   );
 }
-

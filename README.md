@@ -1,63 +1,85 @@
-# CBC Homepage - New Next.js App
+# CBC Homepage
 
-**Purpose:** Rebuild of www.cbcberry.com as a modern Next.js application
+**Live Site:** [www.cbcberry.com](https://www.cbcberry.com)  
+**Purpose:** Marketing website for California Berry Cultivars
+
+## Tech Stack
+
+- **Framework:** Next.js 16 (App Router)
+- **React:** 19.2
+- **Styling:** Tailwind CSS 4
+- **Email:** Resend
+- **Hosting:** Vercel
+- **Analytics:** Vercel Analytics & Speed Insights
 
 ## Project Structure
 
 ```
 cbc-homepage/
-├── app/                    # Next.js app directory
-├── components/             # React components
-├── data/                   # Content and data files
-│   └── scraped-content/   # Content scraped from old site
-├── scripts/                # Utility scripts
-│   └── scrape-content.js  # Content scraper
-└── shared/                 # Shared theme/components (to be added)
+├── app/                    # Next.js pages
+│   ├── about/             # About page
+│   ├── api/               # API routes (contact, apply)
+│   ├── breeding/          # Breeding program page
+│   ├── careers/           # Careers listing page
+│   ├── contact/           # Contact page
+│   ├── cultivar-sublicense/  # Sublicense info
+│   ├── privacy/           # Privacy policy
+│   └── where-to-buy/      # Nursery directory
+├── components/            # React components
+├── data/                  # Reference content (not used in prod)
+├── lib/                   # Utilities (brand data, cultivars)
+├── public/                # Static assets
+│   ├── docs/              # PDFs (sublicense, job descriptions)
+│   └── images/            # Images and logos
+└── shared/theme/          # Shared CSS variables
 ```
 
-## Content Scraping
+## Key Pages
 
-Content has been scraped from the old WordPress site at https://www.caberrycultivars.com/
+| Route | Description |
+|-------|-------------|
+| `/` | Homepage with scroll-snap sections |
+| `/about` | Company story, team, mission |
+| `/breeding` | Breeding program details |
+| `/where-to-buy` | Nursery directory with interactive blob map |
+| `/careers` | Job openings |
+| `/contact` | Contact form |
 
-**Scraped Pages:**
-- Home
-- About Us (and subpages: How It Started, Partners, Team, FAQ)
-- Breeding Program (and subpages: Philosophy, Current Efforts, Innovation)
-- Newsroom
-- Contact
+## Experimental Pages
 
-**Content Files:**
-- `data/scraped-content/all-content.json` - All scraped content
-- `data/scraped-content/summary.json` - Overview
-- `data/scraped-content/[page-name].json` - Individual pages
+| Route | Description |
+|-------|-------------|
+| `/test-waves-xyz789` | R&D page for layered SVG wave backgrounds (Keynote-style) |
 
-See `CONTENT_SUMMARY.md` for detailed breakdown.
+## Components
 
-## Next Steps
-
-1. ✅ Content scraped from old site
-2. ⏳ Review and organize scraped content
-3. ⏳ Design layout structure
-4. ⏳ Decide on theme sharing with cultivar explorer
-5. ⏳ Build page templates
-6. ⏳ Implement navigation
-7. ⏳ Add shared theme (optional)
-
-## Theme Sharing
-
-This app can optionally share theme files from `cbc-cultivar-explorer/shared/theme/`:
-- `variables.css` - Design tokens
-- `base.css` - Base glassmorphism styles
-- `components.css` - Reusable component styles
-
-See `../cbc-cultivar-explorer/docs/THEME_EXTRACTION_GUIDE.md` for details.
+| Component | Status | Description |
+|-----------|--------|-------------|
+| `NavBar.tsx` | Active | Glassmorphism navigation bar |
+| `Footer.tsx` | Active | Site-wide footer |
+| `IntroOverlay.tsx` | Active | Homepage intro animation with scroll reveal |
+| `ContactForm.tsx` | Active | Contact page form (Resend integration) |
+| `ApplicationForm.tsx` | Active | Careers application form |
+| `ScrollReveal.tsx` | Unused | Utility for scroll-triggered animations (kept for future use) |
 
 ## Development
 
 ```bash
+npm install
 npm run dev
+```
+
+## Environment Variables
+
+Required in `.env.local`:
+```
+RESEND_API_KEY=your_resend_api_key
 ```
 
 ## Deployment
 
-This will be deployed as a separate Vercel project for www.cbcberry.com
+Deployed automatically via Vercel on push to main branch.
+
+---
+
+*Last updated: December 2025*

@@ -106,10 +106,10 @@ export default function Home() {
           className={`container relative z-10 py-20 ${introComplete ? (skipAnimation ? 'opacity-100' : 'animate-hero-fade-in') : 'opacity-0'}`}
         >
           <div className="max-w-4xl mx-auto text-center px-4">
-            <p className="text-[#fdbd51] uppercase tracking-[0.2em] text-xs md:text-sm mb-6 font-semibold">
+            <p className="text-[#fdbd51] uppercase tracking-[0.2em] text-sm md:text-sm mb-6 font-semibold">
               {tagLines[2]}
             </p>
-            <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold mb-8 leading-tight">
+            <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold mb-8 leading-tight">
               <span className="text-white">Better berries</span>
               <br />
               <span className="text-[#fdbd51]">for growers,</span>
@@ -123,13 +123,14 @@ export default function Home() {
                 href="https://cultivars.cbcberry.com"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="bg-[#fdbd51] text-black px-8 py-4 rounded-full font-bold uppercase tracking-wider text-sm hover:bg-[#fdbd51]/90 transition-all animate-subtle-pulse"
+                className="bg-[#fdbd51] text-black px-10 py-4 rounded-full font-bold uppercase tracking-wider text-base md:text-sm hover:bg-[#fdbd51]/90 transition-all animate-subtle-pulse"
               >
                 Explore Cultivars
               </a>
             </div>
             
-            <p className="text-lg md:text-xl text-white/90 max-w-2xl mx-auto leading-relaxed text-justify">
+            {/* Full paragraph - desktop only */}
+            <p className="hidden md:block text-lg md:text-xl text-white/90 max-w-2xl mx-auto leading-relaxed text-justify">
               <span style={{ fontFamily: 'Jost, sans-serif' }}><span className="font-medium">California</span> <span className="font-extrabold">Berry</span> <span className="font-medium">Cultivars</span></span> is dedicated to the continual development and improvement of strawberry cultivars—a vital part of supporting and advancing the global strawberry industry. Our team of experts leads collaborative research aimed at creating superior cultivars that meet the needs of growers worldwide, delivering fruit varieties that truly work for the world.
             </p>
           </div>
@@ -145,73 +146,18 @@ export default function Home() {
         )}
       </section>
 
-      {/* What We Do - Gradient section */}
+      {/* Featured Cultivars - Gradient section */}
       <section 
+        id="cultivars"
         className="scroll-snap-section flex items-start md:items-center pt-[10vh] md:pt-0"
         style={{ background: 'linear-gradient(to bottom right, #355e82 0%, #fdbd51 100%)' }}
       >
         <div className="container px-4 py-12 md:py-20" style={{ paddingTop: '50px' }}>
-          <div className={`grid grid-cols-1 md:grid-cols-2 gap-3 md:gap-6 max-w-5xl mx-auto mb-12 md:mb-0 ${activeSection >= 1 ? 'animate-visible' : ''}`}>
-            <Link 
-              href="/breeding#cultivar-development"
-              className={`bg-white/20 backdrop-blur-sm p-4 md:p-8 rounded-xl md:rounded-2xl border-2 border-white/30 hover:bg-white/30 hover:scale-[1.02] transition-all cursor-pointer block
-                ${activeSection >= 1 ? 'animate-slide-in' : 'opacity-0'}
-              `}
-              style={{ animationDelay: '0.1s' }}
-            >
-              <h3 className="text-lg md:text-3xl font-bold mb-2 md:mb-4 text-white">Cultivar Development</h3>
-              <p className="text-white/90 leading-relaxed text-sm md:text-base">
-                Premium short-day and day-neutral varieties for superior fruit quality.
-              </p>
-            </Link>
-            <Link 
-              href="/breeding#field-testing"
-              className={`bg-white/20 backdrop-blur-sm p-4 md:p-8 rounded-xl md:rounded-2xl border-2 border-white/30 hover:bg-white/30 hover:scale-[1.02] transition-all cursor-pointer block
-                ${activeSection >= 1 ? 'animate-slide-in' : 'opacity-0'}
-              `}
-              style={{ animationDelay: '0.2s' }}
-            >
-              <h3 className="text-lg md:text-3xl font-bold mb-2 md:mb-4 text-white">Disease & Field Testing</h3>
-              <p className="text-white/90 leading-relaxed text-sm md:text-base">
-                Comprehensive pathogen screening and multi-site trial validation.
-              </p>
-            </Link>
-            <Link 
-              href="/breeding#cleanstock"
-              className={`bg-white/20 backdrop-blur-sm p-4 md:p-8 rounded-xl md:rounded-2xl border-2 border-white/30 hover:bg-white/30 hover:scale-[1.02] transition-all cursor-pointer block
-                ${activeSection >= 1 ? 'animate-slide-in' : 'opacity-0'}
-              `}
-              style={{ animationDelay: '0.3s' }}
-            >
-              <h3 className="text-lg md:text-3xl font-bold mb-2 md:mb-4 text-white">Cleanstock Program</h3>
-              <p className="text-white/90 leading-relaxed text-sm md:text-base">
-                CDFA-certified virus-free foundation stock for nurseries.
-              </p>
-            </Link>
-            <Link 
-              href="/breeding#grower-partnerships"
-              className={`bg-white/20 backdrop-blur-sm p-4 md:p-8 rounded-xl md:rounded-2xl border-2 border-white/30 hover:bg-white/30 hover:scale-[1.02] transition-all cursor-pointer block
-                ${activeSection >= 1 ? 'animate-slide-in' : 'opacity-0'}
-              `}
-              style={{ animationDelay: '0.4s' }}
-            >
-              <h3 className="text-lg md:text-3xl font-bold mb-2 md:mb-4 text-white">Grower Partnerships</h3>
-              <p className="text-white/90 leading-relaxed text-sm md:text-base">
-                On-farm trials and licensing for real-world results.
-              </p>
-            </Link>
-          </div>
-        </div>
-      </section>
-
-      {/* Featured Cultivars - Medium red section */}
-      <section id="cultivars" className="scroll-snap-section bg-[#c93834] flex items-start md:items-center pt-[10vh] md:pt-0">
-        <div className="container px-4 py-20">
           <h2 className={`text-4xl md:text-5xl lg:text-6xl font-bold mb-4 text-center text-white
-            ${activeSection >= 2 ? 'animate-fade-in' : 'opacity-0'}
+            ${activeSection >= 1 ? 'animate-fade-in' : 'opacity-0'}
           `} style={{ fontFamily: 'Jost, sans-serif' }}>Featured Cultivars</h2>
-          <p className={`text-center text-white/80 mb-8 text-lg max-w-2xl mx-auto
-            ${activeSection >= 2 ? 'animate-fade-in' : 'opacity-0'}
+          <p className={`text-center text-white/90 mb-8 text-lg max-w-2xl mx-auto
+            ${activeSection >= 1 ? 'animate-fade-in' : 'opacity-0'}
           `} style={{ animationDelay: '0.1s' }}>
             Discover our premium varieties designed for superior performance and grower success.
           </p>
@@ -224,7 +170,7 @@ export default function Home() {
                 target="_blank"
                 rel="noopener noreferrer"
                 className={`block overflow-hidden rounded-2xl border-2 border-white/20 hover:border-white/50 hover:scale-[1.02] transition-all cursor-pointer shadow-lg hover:shadow-2xl
-                  ${activeSection >= 2 ? 'animate-slide-in' : 'opacity-0'}
+                  ${activeSection >= 1 ? 'animate-slide-in' : 'opacity-0'}
                   ${index === 3 ? 'hidden md:block' : ''}
                 `}
                 style={{ animationDelay: `${0.2 + index * 0.1}s` }}
@@ -241,15 +187,77 @@ export default function Home() {
               </a>
             ))}
           </div>
-          <div className={`text-center ${activeSection >= 2 ? 'animate-fade-in' : 'opacity-0'}`} style={{ animationDelay: '0.6s', marginBottom: '80px' }}>
+          <div className={`flex flex-col md:flex-row gap-4 justify-center items-center ${activeSection >= 1 ? 'animate-fade-in' : 'opacity-0'}`} style={{ animationDelay: '0.6s', marginBottom: '80px' }}>
             <a
               href="https://cultivars.cbcberry.com"
               target="_blank"
               rel="noopener noreferrer"
-              className="bg-white text-[#c93834] px-8 py-4 rounded-full font-bold uppercase tracking-wider text-sm hover:bg-white/90 transition-all hover:scale-105 inline-block"
+              className="bg-white text-[#355e82] px-8 py-4 rounded-full font-bold uppercase tracking-wider text-sm hover:bg-white/90 transition-all hover:scale-105 inline-block"
             >
               Explore All Cultivars
             </a>
+            <Link
+              href="/where-to-buy"
+              className="bg-white/20 border-2 border-white text-white px-8 py-4 rounded-full font-bold uppercase tracking-wider text-sm hover:bg-white/30 transition-all hover:scale-105 inline-block"
+            >
+              Where to Buy Plants
+            </Link>
+          </div>
+        </div>
+      </section>
+
+      {/* What We Do - Medium red section */}
+      <section className="scroll-snap-section bg-[#c93834] flex items-start md:items-center pt-[10vh] md:pt-0">
+        <div className="container px-4 py-20">
+          <div className={`grid grid-cols-1 md:grid-cols-2 gap-3 md:gap-6 max-w-5xl mx-auto mb-12 md:mb-0 ${activeSection >= 2 ? 'animate-visible' : ''}`}>
+            <Link 
+              href="/breeding#cultivar-development"
+              className={`bg-white/20 backdrop-blur-sm p-4 md:p-8 rounded-xl md:rounded-2xl border-2 border-white/30 hover:bg-white/30 hover:scale-[1.02] transition-all cursor-pointer block
+                ${activeSection >= 2 ? 'animate-slide-in' : 'opacity-0'}
+              `}
+              style={{ animationDelay: '0.1s' }}
+            >
+              <h3 className="text-lg md:text-3xl font-bold mb-2 md:mb-4 text-white">Cultivar Development</h3>
+              <p className="text-white/90 leading-relaxed text-sm md:text-base">
+                Premium short-day and day-neutral varieties for superior fruit quality.
+              </p>
+            </Link>
+            <Link 
+              href="/breeding#field-testing"
+              className={`bg-white/20 backdrop-blur-sm p-4 md:p-8 rounded-xl md:rounded-2xl border-2 border-white/30 hover:bg-white/30 hover:scale-[1.02] transition-all cursor-pointer block
+                ${activeSection >= 2 ? 'animate-slide-in' : 'opacity-0'}
+              `}
+              style={{ animationDelay: '0.2s' }}
+            >
+              <h3 className="text-lg md:text-3xl font-bold mb-2 md:mb-4 text-white">Disease & Field Testing</h3>
+              <p className="text-white/90 leading-relaxed text-sm md:text-base">
+                Comprehensive pathogen screening and multi-site trial validation.
+              </p>
+            </Link>
+            <Link 
+              href="/breeding#cleanstock"
+              className={`bg-white/20 backdrop-blur-sm p-4 md:p-8 rounded-xl md:rounded-2xl border-2 border-white/30 hover:bg-white/30 hover:scale-[1.02] transition-all cursor-pointer block
+                ${activeSection >= 2 ? 'animate-slide-in' : 'opacity-0'}
+              `}
+              style={{ animationDelay: '0.3s' }}
+            >
+              <h3 className="text-lg md:text-3xl font-bold mb-2 md:mb-4 text-white">Cleanstock Program</h3>
+              <p className="text-white/90 leading-relaxed text-sm md:text-base">
+                CDFA-certified virus-free foundation stock for nurseries.
+              </p>
+            </Link>
+            <Link 
+              href="/breeding#grower-partnerships"
+              className={`bg-white/20 backdrop-blur-sm p-4 md:p-8 rounded-xl md:rounded-2xl border-2 border-white/30 hover:bg-white/30 hover:scale-[1.02] transition-all cursor-pointer block
+                ${activeSection >= 2 ? 'animate-slide-in' : 'opacity-0'}
+              `}
+              style={{ animationDelay: '0.4s' }}
+            >
+              <h3 className="text-lg md:text-3xl font-bold mb-2 md:mb-4 text-white">Grower Partnerships</h3>
+              <p className="text-white/90 leading-relaxed text-sm md:text-base">
+                On-farm trials and licensing for real-world results.
+              </p>
+            </Link>
           </div>
         </div>
       </section>

@@ -123,9 +123,8 @@ export default function IntroOverlay() {
   const isFadingOut = phase === 'fadeout';
 
   // Responsive sizes - single breakpoint at 768px
-  const sunSize = isMobile ? '342px' : '380px';
   const cbcFontSize = isMobile ? '120px' : '96px';
-  const taglineFontSize = isMobile ? '14px' : '18px';
+  const taglineFontSize = isMobile ? '16px' : '20px';
 
   return (
     <div 
@@ -137,76 +136,136 @@ export default function IntroOverlay() {
         pointerEvents: isFadingOut ? 'none' : 'auto'
       }}
     >
-      {/* Layer 1: Red background */}
-      <div 
-        className="absolute inset-0"
-        style={{ zIndex: 1, backgroundColor: '#BF1B2C' }}
-      />
+      {/* Layer 1: Background - desktop uses single image, mobile uses 3 stacked layers */}
+      {isMobile ? (
+        <>
+          {/* Mobile: 3 layered images for independent animation */}
+          {/* Bottom layer - sky/background */}
+          <div 
+            className="absolute inset-0 bg-cover bg-center bg-no-repeat"
+            style={{ 
+              zIndex: 1,
+              backgroundImage: 'url(/images/bg/rolling_wave_bg_mobile_bottom.png)'
+            }}
+          />
+          {/* Middle layer - sun (gentle bounce) */}
+          <div 
+            className="absolute inset-0 bg-cover bg-center bg-no-repeat animate-sun-bounce"
+            style={{ 
+              zIndex: 2,
+              backgroundImage: 'url(/images/bg/rolling_wave_bg_mobile_middle.png)'
+            }}
+          />
+          {/* Top layer - foreground hills */}
+          <div 
+            className="absolute inset-0 bg-cover bg-center bg-no-repeat"
+            style={{ 
+              zIndex: 3,
+              backgroundImage: 'url(/images/bg/rolling_wave_bg_mobile_top.png)'
+            }}
+          />
+          {/* Dimming layer - synced with sun dip for sunset effect */}
+          <div 
+            className="absolute inset-0 bg-black animate-sunset-dim"
+            style={{ zIndex: 4 }}
+          />
+        </>
+      ) : (
+        /* Desktop: 3 layered images for independent animation */
+        <>
+          {/* Bottom layer - sky/background */}
+          <div 
+            className="absolute inset-0 bg-cover bg-center bg-no-repeat"
+            style={{ 
+              zIndex: 1,
+              backgroundImage: 'url(/images/bg/rolling_wave_bg_bottom.png)'
+            }}
+          />
+          {/* Middle layer - sun (bouncing) */}
+          <div 
+            className="absolute inset-0 bg-cover bg-center bg-no-repeat animate-sun-bounce"
+            style={{ 
+              zIndex: 2,
+              backgroundImage: 'url(/images/bg/rolling_wave_bg_middle.png)'
+            }}
+          />
+          {/* Top layer - foreground hills */}
+          <div 
+            className="absolute inset-0 bg-cover bg-center bg-no-repeat"
+            style={{ 
+              zIndex: 3,
+              backgroundImage: 'url(/images/bg/rolling_wave_bg_top.png)'
+            }}
+          />
+          {/* Dimming layer - synced with sun dip for sunset effect */}
+          <div 
+            className="absolute inset-0 bg-black animate-sunset-dim"
+            style={{ zIndex: 4 }}
+          />
+        </>
+      )}
 
-      {/* Layer 2: Green panel - slides in from left */}
+      {/* Layer 5: Blue panel - slides in from left */}
       <div 
         className="absolute top-0 left-0 w-1/2 h-full"
         style={{ 
-          zIndex: 2,
+          zIndex: 5,
           backgroundColor: '#355e82',
           transform: isRevealing ? 'translateX(0)' : 'translateX(-100%)',
           transition: 'transform 1s ease-out'
         }}
       />
 
-      {/* Layer 3: Dark red panel - slides in from right */}
+      {/* Layer 6: Dark red panel - slides in from right */}
       <div 
         className="absolute top-0 right-0 w-1/2 h-full"
         style={{ 
-          zIndex: 3,
+          zIndex: 6,
           backgroundColor: '#920000',
           transform: isRevealing ? 'translateX(0)' : 'translateX(100%)',
           transition: 'transform 1s ease-out'
         }}
       />
 
-      {/* Layer 4: Sun graphic - centered */}
-      <div 
-        className="absolute inset-0 flex items-center justify-center"
-        style={{ 
-          zIndex: 10,
-          opacity: isRevealing ? 0 : 1,
-          transition: 'opacity 0.5s ease-out'
-        }}
-      >
-        <img
-          src="/images/fullcoin.png"
-          alt="California Berry Cultivars"
-          style={{ 
-            width: sunSize, 
-            height: sunSize,
-            objectFit: 'contain' 
-          }}
-        />
-      </div>
 
-      {/* Layer 5: CBC text and tagline */}
+      {/* Layer 11: Text and tagline */}
       <div 
         className="absolute inset-0 flex items-center justify-center"
         style={{ 
           zIndex: 11,
           opacity: isRevealing ? 0 : 1,
-          transition: 'opacity 0.5s ease-out',
-          fontFamily: 'Futura, "Futura PT", "Century Gothic", "AppleGothic", sans-serif'
+          transition: 'opacity 0.5s ease-out'
         }}
       >
         <div className="text-center">
-          <h1 
-            style={{ 
-              fontSize: cbcFontSize,
-              fontWeight: 'bold',
-              color: '#920000',
-              letterSpacing: '-0.025em',
-              textShadow: '0 4px 6px rgba(0, 0, 0, 0.3)'
-            }}
-          >
-            CBC
-          </h1>
+          {isMobile ? (
+            /* Mobile: Short "CBC" with Futura */
+            <h1 
+              style={{ 
+                fontSize: cbcFontSize,
+                fontWeight: 'bold',
+                color: '#920000',
+                letterSpacing: '-0.025em',
+                textShadow: '0 2px 4px rgba(0, 0, 0, 0.4)',
+                fontFamily: 'Futura, "Futura PT", "Century Gothic", "AppleGothic", sans-serif'
+              }}
+            >
+              CBC
+            </h1>
+          ) : (
+            /* Desktop: Full trademarked name as graphic */
+            <img
+              src="/images/company_name_yellow.png"
+              alt="California Berry Cultivars"
+              style={{
+                maxWidth: '750px',
+                width: '80%',
+                height: 'auto',
+                display: 'block',
+                margin: '0 auto'
+              }}
+            />
+          )}
           <p 
             style={{
               fontSize: taglineFontSize,
@@ -214,9 +273,10 @@ export default function IntroOverlay() {
               color: '#355e82',
               textTransform: 'uppercase',
               letterSpacing: '0.2em',
-              marginTop: '12px',
+              marginTop: isMobile ? '12px' : '20px',
               lineHeight: '1.6',
-              textShadow: '0 2px 4px rgba(0, 0, 0, 0.2)'
+              textShadow: '0 2px 4px rgba(0, 0, 0, 0.2)',
+              fontFamily: 'Futura, "Futura PT", "Century Gothic", "AppleGothic", sans-serif'
             }}
           >
             Built by People<br />

@@ -82,7 +82,11 @@ export default function Footer() {
                 </a>
               </div>
               <div>© {new Date().getFullYear()} All Rights Reserved</div>
-              <Link href="/contact" className="hover:text-[#c93834] transition-colors">Contact Us</Link>
+              <div className="flex gap-3">
+                <Link href="/contact" className="hover:text-[#c93834] transition-colors">Contact</Link>
+                <span className="text-black/30">|</span>
+                <Link href="/privacy" className="hover:text-[#c93834] transition-colors">Privacy</Link>
+              </div>
             </div>
             <Image
               src="/images/icons/favicon.png"
@@ -113,9 +117,15 @@ export default function Footer() {
             © {new Date().getFullYear()} All Rights Reserved
           </div>
           
-          <Link href="/contact" className="hidden md:block hover:text-[#c93834] transition-colors">
-            Contact Us
-          </Link>
+          <div className="hidden md:flex items-center gap-3">
+            <Link href="/contact" className="hover:text-[#c93834] transition-colors">
+              Contact
+            </Link>
+            <span className="text-black/30">|</span>
+            <Link href="/privacy" className="hover:text-[#c93834] transition-colors">
+              Privacy
+            </Link>
+          </div>
         </div>
       </div>
     </footer>
